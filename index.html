@@ -29,8 +29,12 @@
                 <a href="#partners">Для партнеров</a>
                 <a href="#program">Программа</a>
                 <a href="#contacts">Контакты</a>
+                <a href="#register" class="btn btn-primary btn-sm mobile-only-btn" style="display:none;">Регистрация</a>
             </nav>
-            <a href="#register" class="btn btn-primary btn-sm">Регистрация</a>
+            <div class="nav-actions">
+                <a href="#register" class="btn btn-primary btn-sm desktop-btn">Регистрация</a>
+                <button class="nav-toggle" aria-label="Toggle Navigation">☰</button>
+            </div>
         </div>
     </header>
 
@@ -42,7 +46,7 @@
                 <h1 class="hero-title">AIU FEST</h1>
                 <p class="hero-subtitle">В 2026 году в <br>Международном <br>университете Ала-Тоо.</p>
                 <p class="hero-date">18-апреля</p>
-            </div
+            </div>
             <div class="hero-image">
                 <img src="assets/hero_illustration.png" alt="Education Books" class="hero-img">
             </div>
@@ -165,6 +169,28 @@
         </div>
     </section>
 
+    <!-- Sponsors & Partners Logos Section -->
+    <section class="section bg-card" id="partners">
+        <div class="container text-center">
+            <h2 class="section-title text-uppercase mb-5">Наши Спонсоры и Партнеры</h2>
+            <div class="partners-logo-grid">
+                <div class="partner-logo-box">
+                    <img src="assets/logo-alatoo.png" alt="Partner">
+                </div>
+                <div class="partner-logo-box">
+                    <img src="assets/logo-bakai.png" alt="Partner">
+                </div>
+                <div class="partner-logo-box">
+                    <img src="assets/logo-dodo.png" alt="Partner">
+                </div>
+                <!-- Add more partner logos here as needed -->
+                <div class="partner-logo-box">
+                    <img src="assets/logo.png" alt="Partner">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Program & Map Section -->
     <section class="section bg-card" id="program">
         <div class="container">
@@ -263,6 +289,21 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
