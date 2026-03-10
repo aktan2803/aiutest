@@ -298,7 +298,7 @@ a {
     font-size: 4.5rem;
     margin-right: 5px;
     position: relative;
-    top: 55px;
+    top: 75px;
     /* Shifts hash down without changing container height */
 }
 
