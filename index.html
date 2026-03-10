@@ -24,15 +24,17 @@
                 <img src="assets/logo.png" alt="AIU Fest Logo" style="height: 70px;">
             </a>
             <nav class="nav-links">
-                <a href="#about">О мероприятии</a>
-                <a href="#guests">Для гостей</a>
-                <a href="#partners">Для партнеров</a>
+                <a href="#hero">О мероприятии</a>
                 <a href="#program">Программа</a>
+                <a href="#partners">Партнеры</a>
+                <a href="#gallery">Что ждет</a>
+                <a href="#about">Галерея</a>
                 <a href="#contacts">Контакты</a>
-                <a href="#register" class="btn btn-primary btn-sm mobile-only-btn" style="display:none;">Регистрация</a>
+                <a href="#guests-partners" class="btn btn-primary btn-sm mobile-only-btn"
+                    style="display:none;">Регистрация</a>
             </nav>
             <div class="nav-actions">
-                <a href="#register" class="btn btn-primary btn-sm desktop-btn">Регистрация</a>
+                <a href="#guests-partners" class="btn btn-primary btn-sm desktop-btn">Регистрация</a>
                 <button class="nav-toggle" aria-label="Toggle Navigation">☰</button>
             </div>
         </div>
@@ -43,21 +45,29 @@
         <div class="container-large">
             <div class="hero-banner-card">
                 <!-- Top Row: Logo, Title, Hashtag -->
-                <div class="hero-banner-top flex-wrap">
+                <!-- Top Row: Logo, Title & Subtitle, Hashtag & Date -->
+                <div class="hero-banner-top flex-wrap" style="align-items: flex-end; margin-bottom: 40px;">
                     <img src="assets/logo.png" alt="Ala-Too Logo" class="banner-logo-main">
-                    <div class="banner-text-center">
-                        <h2>ДЕНЬ<br>ОТКРЫТЫХ<br>ДВЕРЕЙ</h2>
+
+                    <div class="hero-text-col"
+                        style="display: flex; flex-direction: column; justify-content: flex-end;">
+                        <div class="banner-text-center">
+                            <h2>ДЕНЬ<br>ОТКРЫТЫХ<br>ДВЕРЕЙ</h2>
+                        </div>
+                        <div class="banner-subtitle" style="margin-top: 0; text-align: left;">ЯРМАРКА ВАКАНСИЙ</div>
                     </div>
-                    <div class="banner-text-hashtag">
-                        <span class="hash">#</span><span class="text">AIU<br>FEST</span>
-                    </div>
-                    <div class="banner-date">
-                        18 АПРЕЛЯ
+
+                    <div class="hero-text-col"
+                        style="display: flex; flex-direction: column; justify-content: flex-end; align-items: center;">
+                        <div class="banner-text-hashtag">
+                            <span class="hash">#</span><span class="text">AIU<br>FEST</span>
+                        </div>
+                        <div class="banner-date">18 АПРЕЛЯ</div>
                     </div>
                 </div>
                 <!-- Bottom Row: Sponsor Logos -->
                 <div class="hero-banner-bottom">
-                    <div class="sponsors-label">СПОНСОРЫ</div>
+                    <div class="sponsors-label">Спонсоры</div>
                     <img src="assets/logo-demir.png" alt="DemirBank">
                     <img src="assets/logo-dodo.png" alt="Dodo Pizza">
                     <img src="assets/logo-cci.png" alt="CCI Kyrgyzstan">
@@ -74,7 +84,7 @@
             <div class="program-map-grid">
                 <!-- Program Column -->
                 <div class="program-column">
-                    <h2 class="section-title text-uppercase mb-4">Программа</h2>
+                    <h2 class="section-title text-uppercase mb-4" style="color: white;">Программа</h2>
                     <div class="program-card"
                         style="background-image: linear-gradient(rgba(43,17,84,0.7), rgba(43,17,84,0.7)), url('assets/hero.png');">
                         <h4>ВСТРЕЧА С ФАКУЛЬТЕТАМИ</h4>
@@ -91,7 +101,7 @@
 
                 <!-- Map Column -->
                 <div class="map-column">
-                    <h2 class="section-title text-uppercase mb-4">Карта локаций</h2>
+                    <h2 class="section-title text-uppercase mb-4" style="color: white;">Карта локаций</h2>
                     <div class="map-blank-card">
                         <h2>КАРТА</h2>
                     </div>
@@ -108,7 +118,7 @@
     <!-- Sponsors & Partners Logos Section -->
     <section class="section bg-card" id="partners">
         <div class="container text-center">
-            <h2 class="section-title text-uppercase mb-5">Наши Партнеры</h2>
+            <h2 class="section-title text-uppercase mb-5" style="color: white;">Наши Партнеры</h2>
             <div class="partners-logo-grid">
                 <div class="partner-logo-box">
                     <img src="assets/logo.png" alt="Partner">
@@ -130,11 +140,12 @@
     <!-- Guests & Partners Glowing Cards -->
     <section class="section" id="guests-partners">
         <div class="container pb-5">
+            <h2 class="section-title text-center mb-5" style="color: white;">Регистрация</h2>
             <div class="glow-cards-grid">
                 <!-- Guests Card -->
                 <div class="glow-card">
                     <div class="glow-orb" style="background: linear-gradient(135deg, #00f2fe, #4facfe);"></div>
-                    <h3 class="card-title text-uppercase" style="text-align: center;">ДЛЯ ГОСТЕЙ</h3>
+                    <h3 class="card-title text-uppercase" style="text-align: center;">ДЛЯ УЧАСТНИКОВ</h3>
                     <a href="#register" class="btn btn-primary btn-block">Участвовать бесплатно</a>
                 </div>
                 <!-- Partners Card -->
@@ -148,9 +159,9 @@
     </section>
 
     <!-- Expanding Gallery Section -->
-    <section class="section" id="gallery" style="padding-top: 0;">
+    <section class="section" id="gallery">
         <div class="container" style="max-width: 1400px;">
-            <h2 class="section-title text-uppercase mb-5">Интересное на AIU Fest</h2>
+            <h2 class="section-title text-uppercase mb-5" style="color: white;">Интересное на AIU Fest</h2>
             <div class="expanding-cards-container">
                 <div class="expand-card">
                     <div class="vertical-title">День открытых дверей</div>
@@ -193,8 +204,8 @@
 
     <!-- About Section -->
     <section class="section" id="about">
-        <div class="container">
-            <h2 class="section-title text-center">О мероприятии</h2>
+        <div class="container" style="max-width: 1400px;">
+            <h2 class="section-title text-center" style="color: white;">Галерея</h2>
             <div class="about-grid mt-5">
                 <div class="about-image">
                     <iframe width="100%" height="350" src="https://www.youtube.com/embed/Cps7mfvhTBU"
@@ -203,34 +214,42 @@
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
                         style="border-radius: 10px; width: 100%; height: 100%; min-height: 350px;"></iframe>
                 </div>
-                <div class="about-content">
-                    <p class="mb-4">Масштабное событие для абитуриентов, студентов и работодателей. В программе:
-                        презентация факультетов, ярмарка вакансий, благотворительная ярмарка еды и концерт.</p>
-                    <p><strong>Таймлайн:</strong></p>
-                    <ul class="simple-list">
-                        <li>- 10:00–12:00 — Встреча с факультетами.</li>
-                        <li>- 12:00–14:00 — Ярмарка вакансий.</li>
-                        <li>- 14:00–18:00 — Фестиваль культур и концерт.</li>
-                    </ul>
+                <div class="about-gallery">
+                    <div class="gallery-scroll-container">
+                        <!-- Slide 1 (3 photos) -->
+                        <div class="gallery-slide">
+                            <img src="assets/test1.jpeg" alt="Festival Image 1" height="350" width="250">
+                            <img src="assets/test2.jpeg" alt="Festival Image 2" height="350" width="250">
+                            <img src="assets/test3.jpeg" alt="Festival Image 3" height="350" width="250">
+                        </div>
+                        <!-- Slide 2 (3 photos) -->
+                        <div class="gallery-slide">
+                            <img src="assets/test7.jpeg" alt="Festival Image 4" height="350" width="250">
+                            <img src="assets/test9.jpeg" alt="Festival Image 5" height="350" width="250">
+                            <img src="assets/test10.jpeg" alt="Festival Image 6" height="350" width="250">
+                        </div>
+                        <!-- Slide 3 (3 photos) -->
+                        <div class="gallery-slide">
+                            <img src="assets/test11.jpeg" alt="Festival Image 7" height="350" width="250">
+                            <img src="assets/test1.jpeg" alt="Festival Image 8" height="350" width="250">
+                            <img src="assets/test2.jpeg" alt="Festival Image 9" height="350" width="250">
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Stats Bar -->
             <div class="stats-bar mt-5">
                 <div class="stat-item">
-                    <h3 class="stat-num">2</h3>
-                    <p class="stat-label">дня</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-num">7000</h3>
+                    <h3 class="stat-num">7000+</h3>
                     <p class="stat-label">посетителей</p>
                 </div>
                 <div class="stat-item">
-                    <h3 class="stat-num">12+</h3>
+                    <h3 class="stat-num">15+</h3>
                     <p class="stat-label">направлений</p>
                 </div>
                 <div class="stat-item">
-                    <h3 class="stat-num">3000</h3>
+                    <h3 class="stat-num">3000+</h3>
                     <p class="stat-label">участников</p>
                 </div>
                 <div class="stat-item">
@@ -242,12 +261,12 @@
                     <p class="stat-label">Спикеров</p>
                 </div>
                 <div class="stat-item">
-                    <h3 class="stat-num">5 000 000</h3>
+                    <h3 class="stat-num">5 000 000+</h3>
                     <p class="stat-label">Охват в соцсетях</p>
                 </div>
                 <div class="stat-item">
-                    <h3 class="stat-num">1500</h3>
-                    <p class="stat-label">М2 экспозиции</p>
+                    <h3 class="stat-num">1500M²</h3>
+                    <p class="stat-label">Экспозиции</p>
                 </div>
             </div>
         </div>
