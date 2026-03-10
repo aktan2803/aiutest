@@ -88,4 +88,70 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
         });
     }
+
+    // Interactive & Auto-scrolling Gallery
+    const galleryContainer = document.querySelector('.gallery-scroll-container');
+    if (galleryContainer) {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        let autoScrollInterval;
+
+        // Auto-scroll logic
+        const startAutoScroll = () => {
+            autoScrollInterval = setInterval(() => {
+                galleryContainer.scrollLeft += 1;
+                // Seamless loop: switch back to start if at the end
+                if (galleryContainer.scrollLeft >= (galleryContainer.scrollWidth - galleryContainer.clientWidth)) {
+                    // Slight delay before reset looks somewhat natural on snapping
+                    setTimeout(() => {
+                        galleryContainer.scrollLeft = 0;
+                    }, 500);
+                }
+            }, 30);
+        };
+
+        const stopAutoScroll = () => {
+            clearInterval(autoScrollInterval);
+        };
+
+        // Start initially
+        startAutoScroll();
+
+        // Mouse drag logic
+        galleryContainer.addEventListener('mousedown', (e) => {
+            isDown = true;
+            stopAutoScroll(); // Pause on interaction
+            galleryContainer.style.cursor = 'grabbing';
+            galleryContainer.style.scrollBehavior = 'auto'; // Remove smooth scroll snap temporarily 
+            startX = e.pageX - galleryContainer.offsetLeft;
+            scrollLeft = galleryContainer.scrollLeft;
+        });
+
+        galleryContainer.addEventListener('mouseleave', () => {
+            isDown = false;
+            galleryContainer.style.cursor = 'grab';
+            galleryContainer.style.scrollBehavior = 'smooth';
+            startAutoScroll(); // Resume
+        });
+
+        galleryContainer.addEventListener('mouseup', () => {
+            isDown = false;
+            galleryContainer.style.cursor = 'grab';
+            galleryContainer.style.scrollBehavior = 'smooth';
+            startAutoScroll(); // Resume
+        });
+
+        galleryContainer.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - galleryContainer.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll-fast multiplier
+            galleryContainer.scrollLeft = scrollLeft - walk;
+        });
+
+        // Pause auto scroll on touch interaction too
+        galleryContainer.addEventListener('touchstart', stopAutoScroll, { passive: true });
+        galleryContainer.addEventListener('touchend', startAutoScroll, { passive: true });
+    }
 });
