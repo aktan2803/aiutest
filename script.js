@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         header.addEventListener('click', () => {
             const item = header.parentElement;
             const content = item.querySelector('.accordion-content');
-            
+
             // Close all others
             document.querySelectorAll('.accordion-item').forEach(otherItem => {
                 if (otherItem !== item) {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     otherItem.querySelector('.accordion-content').style.maxHeight = null;
                 }
             });
-            
+
             // Toggle current
             item.classList.toggle('active');
             if (item.classList.contains('active')) {
@@ -49,11 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Set initial accordion height
     const activeAccordion = document.querySelector('.accordion-item.active .accordion-content');
-    if(activeAccordion) {
+    if (activeAccordion) {
         activeAccordion.style.maxHeight = activeAccordion.scrollHeight + 'px';
     }
 
-    // Form Mock Submission
+    // Form Submission
     const regForm = document.getElementById('regForm');
     const formMsg = document.getElementById('formMsg');
     if (regForm) {
@@ -62,16 +62,30 @@ document.addEventListener('DOMContentLoaded', () => {
             const btn = regForm.querySelector('button[type="submit"]');
             btn.innerHTML = 'Отправка...';
             btn.disabled = true;
-            
-            // Mock API delay
-            setTimeout(() => {
-                formMsg.innerHTML = 'Спасибо за регистрацию! Мы отправили билет на ваш email.';
-                formMsg.style.color = '#10b981'; // success green
-                regForm.reset();
-                btn.innerHTML = 'Зарегистрироваться';
-                btn.disabled = false;
-            }, 1000);
+
+            const formData = new FormData(regForm);
+
+            fetch("https://formsubmit.co/ajax/flashrit@icloud.com", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    formMsg.innerHTML = 'Спасибо за регистрацию!';
+                    formMsg.style.color = '#10b981'; // success green
+                    regForm.reset();
+                    btn.innerHTML = 'Зарегистрироваться';
+                    btn.disabled = false;
+                })
+                .catch(error => {
+                    formMsg.innerHTML = 'Произошла ошибка при отправке.';
+                    formMsg.style.color = '#ff4d4f'; // error red
+                    btn.innerHTML = 'Зарегистрироваться';
+                    btn.disabled = false;
+                });
         });
     }
 });
-
