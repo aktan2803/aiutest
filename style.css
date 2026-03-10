@@ -254,16 +254,34 @@ a {
 
 .banner-text-center {
     text-align: left;
+    margin-bottom: 90px;
 }
 
 .banner-text-center h2 {
     color: #1e1b4b;
     /* Dark text */
     font-weight: 600;
-    font-size: 5.5rem;
+    font-size: 4.5rem;
     line-height: 1.1;
     text-transform: uppercase;
     margin: 0;
+}
+
+.banner-subtitle {
+    color: #df2029;
+    /* AIU Red */
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.hero-banner-middle {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 70px;
+    padding: 0 20px;
 }
 
 .banner-text-hashtag {
@@ -273,16 +291,19 @@ a {
     /* Red */
     font-weight: 900;
     line-height: 0.9;
+    margin-bottom: 90px;
 }
 
 .banner-text-hashtag .hash {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
     margin-right: 5px;
-    margin-top: 5px;
+    position: relative;
+    top: 55px;
+    /* Shifts hash down without changing container height */
 }
 
 .banner-text-hashtag .text {
-    font-size: 9rem;
+    font-size: 7.5rem;
     letter-spacing: -2px;
 }
 
@@ -290,12 +311,10 @@ a {
     color: #1e1b4b;
     /* Dark text */
     font-weight: 600;
-    font-size: 3.5rem;
+    font-size: 3rem;
     line-height: 1.1;
-    text-align: right;
+    text-align: center;
     white-space: nowrap;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
 }
 
 .hero-banner-bottom {
@@ -451,7 +470,7 @@ a {
 ==================== */
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 4fr 6fr;
     gap: 50px;
     align-items: center;
 }
@@ -459,6 +478,60 @@ a {
 .img-responsive {
     max-width: 100%;
     height: auto;
+}
+
+.about-gallery {
+    width: 100%;
+    height: 350px;
+    /* Match video height */
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.gallery-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding-bottom: 10px;
+    height: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #1e1b4b rgba(0, 0, 0, 0.05);
+
+    /* For smooth interaction */
+    scroll-behavior: smooth;
+    cursor: grab;
+}
+
+.gallery-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gallery-scroll-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.gallery-scroll-container::-webkit-scrollbar-thumb {
+    background: #1e1b4b;
+    border-radius: 4px;
+}
+
+.gallery-slide {
+    display: flex;
+    gap: 15px;
+    scroll-snap-align: start;
+    /* Snap the whole group of 3 */
+    flex-shrink: 0;
+}
+
+.gallery-scroll-container img {
+    border-radius: 10px;
+    min-width: 250px;
+    width: 250px;
+    height: 100%;
+    object-fit: cover;
 }
 
 .rounded {
@@ -477,11 +550,12 @@ a {
 }
 
 .stats-bar {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
     text-align: center;
     margin-top: 60px;
+    flex-wrap: nowrap;
 }
 
 .stat-item {
@@ -519,7 +593,9 @@ a {
 
 .glow-card {
     position: relative;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 20px;
     padding: 60px 40px;
@@ -701,26 +777,23 @@ a {
 }
 
 .expand-card:nth-child(1) {
-    background-image: url('assets/hero.png');
+    background-image: url('assets/test11.jpeg');
 }
 
 .expand-card:nth-child(2) {
-    background-image: url('assets/hero_bg_colored.png');
+    background-image: url('assets/test3.jpeg');
 }
 
 .expand-card:nth-child(3) {
-    background-image: url('assets/hero.png');
-    filter: hue-rotate(60deg);
+    background-image: url('assets/test7.jpeg');
 }
 
 .expand-card:nth-child(4) {
-    background-image: url('assets/hero_bg_colored.png');
-    filter: hue-rotate(120deg);
+    background-image: url('assets/test9.jpeg');
 }
 
 .expand-card:nth-child(5) {
-    background-image: url('assets/hero.png');
-    filter: hue-rotate(180deg);
+    background-image: url('assets/test10.jpeg');
 }
 
 .vertical-title {
@@ -875,11 +948,11 @@ a {
 
 /* Footer */
 .footer {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 60px 0 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .footer-content {
