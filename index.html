@@ -40,47 +40,152 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="container hero-container">
-            <div class="hero-text">
-                <p class="hero-top-text">ДЕНЬ ОТКРЫТЫХ ДВЕРЕЙ</p>
-                <h1 class="hero-title">AIU FEST</h1>
-                <p class="hero-subtitle">В 2026 году в <br>Международном <br>университете Ала-Тоо.</p>
-                <p class="hero-date">18-апреля</p>
-            </div>
-            <div class="hero-image">
-                <img src="assets/hero_illustration.png" alt="Education Books" class="hero-img">
+        <div class="container-large">
+            <div class="hero-banner-card">
+                <!-- Top Row: Logo, Title, Hashtag -->
+                <div class="hero-banner-top flex-wrap">
+                    <img src="assets/logo.png" alt="Ala-Too Logo" class="banner-logo-main">
+                    <div class="banner-text-center">
+                        <h2>ДЕНЬ<br>ОТКРЫТЫХ<br>ДВЕРЕЙ</h2>
+                    </div>
+                    <div class="banner-text-hashtag">
+                        <span class="hash">#</span><span class="text">AIU<br>FEST</span>
+                    </div>
+                    <div class="banner-date">
+                        18 АПРЕЛЯ
+                    </div>
+                </div>
+                <!-- Bottom Row: Sponsor Logos -->
+                <div class="hero-banner-bottom">
+                    <div class="sponsors-label">СПОНСОРЫ</div>
+                    <img src="assets/logo-demir.png" alt="DemirBank">
+                    <img src="assets/logo-dodo.png" alt="Dodo Pizza">
+                    <img src="assets/logo-cci.png" alt="CCI Kyrgyzstan">
+                    <img src="assets/logo-obank.png" alt="O! Bank">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Support Partners -->
-    <section class="support-section">
-        <div class="container text-center">
-            <h3 class="support-title">Мероприятие проводится <br>при поддержке</h3>
-            <div class="support-logos">
-                <img src="assets/logo-alatoo.png" alt="Ala-Too" class="support-logo">
-                <img src="assets/logo-bakai.png" alt="Bakai Bank" class="support-logo">
-                <img src="assets/logo-dodo.png" alt="Dodo Pizza" class="support-logo">
+
+    <!-- Program & Map Section -->
+    <section class="section bg-card" id="program">
+        <div class="container">
+            <div class="program-map-grid">
+                <!-- Program Column -->
+                <div class="program-column">
+                    <h2 class="section-title text-uppercase mb-4">Программа</h2>
+                    <div class="program-card"
+                        style="background-image: linear-gradient(rgba(43,17,84,0.7), rgba(43,17,84,0.7)), url('assets/hero.png');">
+                        <h4>ВСТРЕЧА С ФАКУЛЬТЕТАМИ</h4>
+                    </div>
+                    <div class="program-card"
+                        style="background-image: linear-gradient(rgba(0,71,255,0.7), rgba(0,71,255,0.7)), url('assets/hero.png');">
+                        <h4>ЯРМАРКА ВАКАНСИЙ</h4>
+                    </div>
+                    <div class="program-card"
+                        style="background-image: linear-gradient(rgba(236,72,153,0.7), rgba(236,72,153,0.7)), url('assets/hero.png');">
+                        <h4>КОНЦЕРТ</h4>
+                    </div>
+                </div>
+
+                <!-- Map Column -->
+                <div class="map-column">
+                    <h2 class="section-title text-uppercase mb-4">Карта локаций</h2>
+                    <div class="map-blank-card">
+                        <h2>КАРТА</h2>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Organizers -->
-    <section class="organizers-section">
+
+
+
+
+
+    <!-- Sponsors & Partners Logos Section -->
+    <section class="section bg-card" id="partners">
         <div class="container text-center">
-            <h3 class="support-title">Организаторы</h3>
-            <div class="organizer-logos">
-                <div class="org-item">
-                    <div class="org-circle"><img src="assets/logo.png" alt="Logo"></div>
-                    <p>Ала-Тоо</p>
+            <h2 class="section-title text-uppercase mb-5">Наши Партнеры</h2>
+            <div class="partners-logo-grid">
+                <div class="partner-logo-box">
+                    <img src="assets/logo.png" alt="Partner">
                 </div>
-                <div class="org-item">
-                    <div class="org-circle"><img src="assets/logo.png" alt="Logo"></div>
-                    <p>Отдел по внеучебной<br>деятельности</p>
+                <div class="partner-logo-box">
+                    <img src="assets/logo.png" alt="Partner">
                 </div>
-                <div class="org-item">
-                    <div class="org-circle"><img src="assets/logo.png" alt="Logo"></div>
-                    <p>Отдел Маркетинга</p>
+                <div class="partner-logo-box">
+                    <img src="assets/logo.png" alt="Partner">
+                </div>
+                <!-- Add more partner logos here as needed -->
+                <div class="partner-logo-box">
+                    <img src="assets/logo.png" alt="Partner">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guests & Partners Glowing Cards -->
+    <section class="section" id="guests-partners">
+        <div class="container pb-5">
+            <div class="glow-cards-grid">
+                <!-- Guests Card -->
+                <div class="glow-card">
+                    <div class="glow-orb" style="background: linear-gradient(135deg, #00f2fe, #4facfe);"></div>
+                    <h3 class="card-title text-uppercase" style="text-align: center;">ДЛЯ ГОСТЕЙ</h3>
+                    <a href="#register" class="btn btn-primary btn-block">Участвовать бесплатно</a>
+                </div>
+                <!-- Partners Card -->
+                <div class="glow-card">
+                    <div class="glow-orb" style="background: linear-gradient(135deg, #ff0844, #ffb199);"></div>
+                    <h3 class="card-title text-uppercase" style="text-align: center;">ДЛЯ ПАРТНЕРОВ</h3>
+                    <a href="#partners" class="btn btn-primary btn-block">Стать партнером</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expanding Gallery Section -->
+    <section class="section" id="gallery" style="padding-top: 0;">
+        <div class="container" style="max-width: 1400px;">
+            <h2 class="section-title text-uppercase mb-5">Интересное на AIU Fest</h2>
+            <div class="expanding-cards-container">
+                <div class="expand-card">
+                    <div class="vertical-title">День открытых дверей</div>
+                    <div class="card-content">
+                        <h3>День открытых дверей</h3>
+                        <p>Открой свой университет: 5 факультетов, 22 программы.</p>
+                    </div>
+                </div>
+                <div class="expand-card">
+                    <div class="vertical-title">Ярмарка вакансий</div>
+                    <div class="card-content">
+                        <h3>Ярмарка вакансий</h3>
+                        <p>Начни строить карьеру с крупнейшими работодателями страны.</p>
+                    </div>
+                </div>
+                <div class="expand-card">
+                    <div class="vertical-title">18 стран в одном месте</div>
+                    <div class="card-content">
+                        <h3>18 стран в одном месте</h3>
+                        <p>Познакомься с культурой, традициями и национальной кухней.</p>
+                    </div>
+                </div>
+                <div class="expand-card">
+                    <div class="vertical-title">Шоу-Программа</div>
+                    <div class="card-content">
+                        <h3>Шоу-программа</h3>
+                        <p>Зарядись эмоциями на праздничном концерте со звездными гостями.</p>
+                    </div>
+                </div>
+                <div class="expand-card">
+                    <div class="vertical-title">Квест и лотерея</div>
+                    <div class="card-content">
+                        <h3>Квест и лотерея</h3>
+                        <p>Собирай фишки, меняй на крутые призы или выигрывай в лотерее.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -92,7 +197,11 @@
             <h2 class="section-title text-center">О мероприятии</h2>
             <div class="about-grid mt-5">
                 <div class="about-image">
-                    <img src="assets/hero.png" alt="Crowd" class="img-responsive rounded">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/Cps7mfvhTBU"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                        style="border-radius: 10px; width: 100%; height: 100%; min-height: 350px;"></iframe>
                 </div>
                 <div class="about-content">
                     <p class="mb-4">Масштабное событие для абитуриентов, студентов и работодателей. В программе:
@@ -145,122 +254,6 @@
     </section>
 
 
-    <!-- Guests & Partners Glowing Cards -->
-    <section class="section" id="guests-partners">
-        <div class="container pb-5">
-            <div class="glow-cards-grid">
-                <!-- Guests Card -->
-                <div class="glow-card">
-                    <div class="glow-orb" style="background: linear-gradient(135deg, #00f2fe, #4facfe);"></div>
-                    <h3 class="card-title text-uppercase">ДЛЯ ГОСТЕЙ</h3>
-                    <p class="mb-4">Что получат абитуриенты:<br>1) Возможность задать вопросы преподавателям.<br>2)
-                        Подарки за регистрацию (чек-лист для поступления).</p>
-                    <a href="#register" class="btn btn-primary btn-block">Участвовать бесплатно</a>
-                </div>
-                <!-- Partners Card -->
-                <div class="glow-card">
-                    <div class="glow-orb" style="background: linear-gradient(135deg, #ff0844, #ffb199);"></div>
-                    <h3 class="card-title text-uppercase">ДЛЯ ПАРТНЕРОВ</h3>
-                    <p class="mb-4">Преимущества спонсорства:<br>1) Логотип на сайте и в соцсетях.<br>2) Доступ к
-                        аудитории 1000+ человек.</p>
-                    <a href="#partners" class="btn btn-primary btn-block">Стать партнером</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sponsors & Partners Logos Section -->
-    <section class="section bg-card" id="partners">
-        <div class="container text-center">
-            <h2 class="section-title text-uppercase mb-5">Наши Спонсоры и Партнеры</h2>
-            <div class="partners-logo-grid">
-                <div class="partner-logo-box">
-                    <img src="assets/logo-alatoo.png" alt="Partner">
-                </div>
-                <div class="partner-logo-box">
-                    <img src="assets/logo-bakai.png" alt="Partner">
-                </div>
-                <div class="partner-logo-box">
-                    <img src="assets/logo-dodo.png" alt="Partner">
-                </div>
-                <!-- Add more partner logos here as needed -->
-                <div class="partner-logo-box">
-                    <img src="assets/logo.png" alt="Partner">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Program & Map Section -->
-    <section class="section bg-card" id="program">
-        <div class="container">
-            <div class="program-map-grid">
-                <!-- Program Column -->
-                <div class="program-column">
-                    <h2 class="section-title text-uppercase mb-4">Программа</h2>
-                    <div class="program-card"
-                        style="background-image: linear-gradient(rgba(43,17,84,0.7), rgba(43,17,84,0.7)), url('assets/hero.png');">
-                        <h4>ВСТРЕЧА С ФАКУЛЬТЕТАМИ</h4>
-                    </div>
-                    <div class="program-card"
-                        style="background-image: linear-gradient(rgba(0,71,255,0.7), rgba(0,71,255,0.7)), url('assets/hero.png');">
-                        <h4>ЯРМАРКА ВАКАНСИЙ</h4>
-                    </div>
-                    <div class="program-card"
-                        style="background-image: linear-gradient(rgba(236,72,153,0.7), rgba(236,72,153,0.7)), url('assets/hero.png');">
-                        <h4>КОНЦЕРТ</h4>
-                    </div>
-                </div>
-
-                <!-- Map Column -->
-                <div class="map-column">
-                    <h2 class="section-title text-uppercase mb-4">Карта локаций</h2>
-                    <div class="map-blank-card">
-                        <h2>КАРТА</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Registration Section -->
-    <section class="section" id="register">
-        <div class="container">
-            <div class="form-container">
-                <div class="form-info">
-                    <h2>Присоединяйтесь к нам!</h2>
-                    <p>Заполните форму, и мы пришлем вам электронный билет и подробное расписание фестиваля.</p>
-                    <div class="contact-mini mt-4">
-                        <p>📞 +996 555 820 000</p>
-                        <p>📧 sch@alatoo.edu.kg</p>
-                    </div>
-                </div>
-                <form id="regForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="role">Я регистрируюсь как:</label>
-                        <select id="role" name="role" required>
-                            <option value="student">Абитуриент / Студент</option>
-                            <option value="company">Представитель компании</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Ваше имя (или название компании)</label>
-                        <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Номер телефона</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+996 (---) --- ---" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Зарегистрироваться</button>
-                    <p class="form-msg" id="formMsg"></p>
-                </form>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer" id="contacts">
