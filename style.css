@@ -187,7 +187,8 @@ a {
     width: var(--logo-size-nav);
     height: var(--logo-size-nav);
     object-fit: contain;
-    border-radius: 50%; /* Ensuring circular look if image is square */
+    border-radius: 50%;
+    /* Ensuring circular look if image is square */
 }
 
 .logo-text {
@@ -247,7 +248,7 @@ a {
     margin: 0 auto;
     position: relative;
     z-index: 2;
-    animation: fadeInUp 1s ease forwards;
+    animation: fadeIn 1s ease forwards;
 }
 
 .hero-banner-top {
@@ -385,6 +386,12 @@ a {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Separate opacity-only fade for hero card (so JS can control transform freely) */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 /* ==================== 
@@ -858,15 +865,18 @@ a {
     min-width: 300px;
 }
 
-.expand-card:hover {
+.expand-card:hover,
+.expand-card.active {
     flex: 5;
 }
 
-.expand-card:hover .vertical-title {
+.expand-card:hover .vertical-title,
+.expand-card.active .vertical-title {
     opacity: 0;
 }
 
-.expand-card:hover .card-content {
+.expand-card:hover .card-content,
+.expand-card.active .card-content {
     opacity: 1;
     visibility: visible;
 }
@@ -1080,80 +1090,21 @@ a {
     }
 }
 
+/* Hero scaling on tablets & mobile — JS sets the actual scale value */
 @media (max-width: 992px) {
-    .hero-banner-top {
-        gap: 15px;
-        justify-content: center;
+    .container-large {
+        overflow: visible;
+        padding: 0 24px;
     }
 
-    .banner-logo-main {
-        height: 120px;
-    }
-
-    .banner-text-center h2 {
-        font-size: 2.5rem;
-    }
-
-    .banner-subtitle {
-        font-size: 1rem;
-    }
-
-    .banner-text-hashtag .hash {
-        font-size: 2.5rem;
-        top: 35px;
-    }
-
-    .banner-text-hashtag .text {
-        font-size: 2rem;
-    }
-
-    .hero-banner-bottom {
-        justify-content: center;
-        flex-wrap: wrap;
+    .hero-banner-card {
+        width: 1520px;
+        transform-origin: top center;
+        /* scale() value is injected by JS via inline style */
     }
 }
 
 @media (max-width: 768px) {
-    .hero-banner-top {
-        gap: 8px;
-    }
-
-    .banner-logo-main {
-        height: 80px;
-        width: 80px;
-    }
-
-    .banner-text-center h2 {
-        font-size: 1.5rem;
-    }
-
-    .banner-subtitle {
-        font-size: 0.6rem;
-    }
-
-    .banner-text-hashtag .hash {
-        font-size: 1.5rem;
-        top: 25px;
-    }
-
-    .banner-text-hashtag .text {
-        font-size: 1.2rem;
-    }
-
-    .banner-date {
-        font-size: 0.8rem;
-    }
-
-    .sponsors-label {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-        letter-spacing: 2px;
-        -webkit-text-stroke: 1px #1e1b4b;
-    }
-
-    .hero-banner-bottom img {
-        height: 40px;
-    }
 
     .support-logos {
         gap: 15px;
@@ -1251,76 +1202,8 @@ a {
 
 @media (max-width: 480px) {
     .hero {
-        padding-top: 100px;
+        padding-top: 80px;
         padding-bottom: 20px;
-    }
-
-    .hero-banner-card {
-        padding: 20px 10px;
-    }
-
-    .hero-banner-top {
-        gap: 3vw;
-        justify-content: space-between;
-        margin-bottom: 8vw;
-        flex-wrap: nowrap;
-        align-items: flex-end;
-    }
-
-    .banner-logo-main {
-        height: 36vw;
-        position: relative;
-        left: -4vw;
-        top: -2vw;
-    }
-
-    .banner-text-center {
-        margin-bottom: 2vw;
-    }
-
-    .banner-text-center h2 {
-        font-size: 6vw;
-        line-height: 1.1;
-    }
-
-    .hero-title-col .banner-subtitle {
-        font-size: 3vw;
-        letter-spacing: 0px;
-    }
-
-    .banner-text-hashtag {
-        margin-bottom: 2vw;
-    }
-
-    .banner-text-hashtag .hash {
-        font-size: 8vw;
-        margin-right: 1vw;
-        top: 3vw;
-    }
-
-    .banner-text-hashtag .text {
-        font-size: 6vw;
-        line-height: 0.9;
-    }
-
-    .banner-date {
-        font-size: 3.5vw;
-    }
-
-    .sponsors-label {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-        letter-spacing: 1px;
-        -webkit-text-stroke: 1px #1e1b4b;
-    }
-
-    .hero-banner-bottom {
-        padding-top: 20px;
-        gap: 10px;
-    }
-
-    .hero-banner-bottom img {
-        height: 8vw;
     }
 
     .glow-card {
