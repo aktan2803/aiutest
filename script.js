@@ -1,4 +1,40 @@
+// ── Hero Banner Scaling ──────────────────────────────────────────────────────
+// CSS calc() cannot produce a unitless value from viewport units, so we use JS.
+function scaleHeroBanner() {
+    const card = document.querySelector('.hero-banner-card');
+    if (!card) return;
+
+    const DESKTOP_W = 1520; // px — the fixed width set in CSS for mobile
+
+    if (window.innerWidth <= 992) {
+        const availableW = window.innerWidth - 48; // container padding (24px each side)
+        const scale = availableW / DESKTOP_W;
+
+        // Get the card's natural (unscaled) height BEFORE applying transform
+        card.style.transform = '';
+        card.style.marginBottom = '';
+        const naturalH = card.offsetHeight;
+
+        const scaledH = naturalH * scale;
+        const deadSpace = scaledH - naturalH; // negative number
+
+        card.style.transform = `scale(${scale})`;
+        card.style.marginBottom = `${deadSpace}px`;
+    } else {
+        // Reset on desktop
+        card.style.transform = '';
+        card.style.marginBottom = '';
+    }
+}
+
+// Run after DOM + after full page load (images affect card height)
+document.addEventListener('DOMContentLoaded', () => requestAnimationFrame(scaleHeroBanner));
+window.addEventListener('load', scaleHeroBanner);
+window.addEventListener('resize', scaleHeroBanner);
+// ─────────────────────────────────────────────────────────────────────────────
+
 document.addEventListener('DOMContentLoaded', () => {
+    scaleHeroBanner(); // run again after full DOM is ready
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -154,4 +190,19 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryContainer.addEventListener('touchstart', stopAutoScroll, { passive: true });
         galleryContainer.addEventListener('touchend', startAutoScroll, { passive: true });
     }
+
+    // ── Expanding Gallery: tap to open on touch devices ───────────────────────
+    const expandCards = document.querySelectorAll('.expand-card');
+    expandCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const isAlreadyActive = card.classList.contains('active');
+            // Close all cards first
+            expandCards.forEach(c => c.classList.remove('active'));
+            // If it wasn't active before, open it; if it was, leave all closed
+            if (!isAlreadyActive) {
+                card.classList.add('active');
+            }
+        });
+    });
+    // ─────────────────────────────────────────────────────────────────────────
 });
