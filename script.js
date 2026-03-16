@@ -1,5 +1,6 @@
 // ── Hero Banner Scaling ──────────────────────────────────────────────────────
 // CSS calc() cannot produce a unitless value from viewport units, so we use JS.
+// transform-origin is set to "top left" in CSS so scale anchors from the left edge.
 function scaleHeroBanner() {
     const card = document.querySelector('.hero-banner-card');
     if (!card) return;
@@ -18,6 +19,7 @@ function scaleHeroBanner() {
         const scaledH = naturalH * scale;
         const deadSpace = scaledH - naturalH; // negative number
 
+        // transform-origin: top left — no horizontal shift needed, only fix vertical dead space
         card.style.transform = `scale(${scale})`;
         card.style.marginBottom = `${deadSpace}px`;
     } else {
@@ -125,71 +127,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Interactive & Auto-scrolling Gallery
-    const galleryContainer = document.querySelector('.gallery-scroll-container');
-    if (galleryContainer) {
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-        let autoScrollInterval;
+    // ── Photo Slider (manual prev/next, no auto-scroll) ───────────────────────
+    const sliderTrack  = document.getElementById('sliderTrack');
+    const sliderPrev   = document.getElementById('sliderPrev');
+    const sliderNext   = document.getElementById('sliderNext');
+    const sliderDots   = document.getElementById('sliderDots');
 
-        // Auto-scroll logic
-        const startAutoScroll = () => {
-            autoScrollInterval = setInterval(() => {
-                galleryContainer.scrollLeft += 1;
-                // Seamless loop: switch back to start if at the end
-                if (galleryContainer.scrollLeft >= (galleryContainer.scrollWidth - galleryContainer.clientWidth)) {
-                    // Slight delay before reset looks somewhat natural on snapping
-                    setTimeout(() => {
-                        galleryContainer.scrollLeft = 0;
-                    }, 500);
-                }
-            }, 30);
-        };
+    if (sliderTrack && sliderPrev && sliderNext) {
+        const slides     = sliderTrack.querySelectorAll('.slider-slide');
+        const total      = slides.length;
+        let   current    = 0;
 
-        const stopAutoScroll = () => {
-            clearInterval(autoScrollInterval);
-        };
-
-        // Start initially
-        startAutoScroll();
-
-        // Mouse drag logic
-        galleryContainer.addEventListener('mousedown', (e) => {
-            isDown = true;
-            stopAutoScroll(); // Pause on interaction
-            galleryContainer.style.cursor = 'grabbing';
-            galleryContainer.style.scrollBehavior = 'auto'; // Remove smooth scroll snap temporarily 
-            startX = e.pageX - galleryContainer.offsetLeft;
-            scrollLeft = galleryContainer.scrollLeft;
+        // Build dots
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', `Слайд ${i + 1}`);
+            dot.addEventListener('click', () => goTo(i));
+            sliderDots.appendChild(dot);
         });
 
-        galleryContainer.addEventListener('mouseleave', () => {
-            isDown = false;
-            galleryContainer.style.cursor = 'grab';
-            galleryContainer.style.scrollBehavior = 'smooth';
-            startAutoScroll(); // Resume
-        });
+        function updateDots() {
+            sliderDots.querySelectorAll('.slider-dot').forEach((d, i) => {
+                d.classList.toggle('active', i === current);
+            });
+        }
 
-        galleryContainer.addEventListener('mouseup', () => {
-            isDown = false;
-            galleryContainer.style.cursor = 'grab';
-            galleryContainer.style.scrollBehavior = 'smooth';
-            startAutoScroll(); // Resume
-        });
+        function goTo(index) {
+            current = Math.max(0, Math.min(index, total - 1));
+            sliderTrack.style.transform = `translateX(-${current * 100}%)`;
+            sliderPrev.disabled = current === 0;
+            sliderNext.disabled = current === total - 1;
+            updateDots();
+        }
 
-        galleryContainer.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - galleryContainer.offsetLeft;
-            const walk = (x - startX) * 2; // Scroll-fast multiplier
-            galleryContainer.scrollLeft = scrollLeft - walk;
-        });
+        sliderPrev.addEventListener('click', () => goTo(current - 1));
+        sliderNext.addEventListener('click', () => goTo(current + 1));
 
-        // Pause auto scroll on touch interaction too
-        galleryContainer.addEventListener('touchstart', stopAutoScroll, { passive: true });
-        galleryContainer.addEventListener('touchend', startAutoScroll, { passive: true });
+        // Touch / swipe support
+        let touchStartX = 0;
+        sliderTrack.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+        sliderTrack.addEventListener('touchend', e => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+        }, { passive: true });
+
+        // Initialise
+        goTo(0);
     }
+    // ─────────────────────────────────────────────────────────────────────────
 
     // ── Expanding Gallery: tap to open on touch devices ───────────────────────
     const expandCards = document.querySelectorAll('.expand-card');
