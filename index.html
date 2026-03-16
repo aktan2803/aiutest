@@ -205,11 +205,13 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About / Gallery Section -->
     <section class="section" id="about">
         <div class="container" style="max-width: 1400px;">
             <h2 class="section-title text-center" style="color: white;">Галерея</h2>
+
             <div class="about-grid mt-5">
+                <!-- YouTube video (40%) -->
                 <div class="about-image">
                     <iframe width="100%" height="350" src="https://www.youtube.com/embed/Cps7mfvhTBU"
                         title="YouTube video player" frameborder="0"
@@ -217,35 +219,81 @@
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
                         style="border-radius: 10px; width: 100%; height: 100%; min-height: 350px;"></iframe>
                 </div>
+
+                <!-- Photo Slider (60%) -->
                 <div class="about-gallery">
-                    <div class="gallery-scroll-container">
-                        <!-- Slide 1 (3 photos) -->
-                        <div class="gallery-slide">
-                            <img src="assets/test1.jpeg" alt="Festival Image 1" height="350" width="250" loading="lazy"
-                                decoding="async">
-                            <img src="assets/test2.jpeg" alt="Festival Image 2" height="350" width="250" loading="lazy"
-                                decoding="async">
-                            <img src="assets/test3.jpeg" alt="Festival Image 3" height="350" width="250" loading="lazy"
-                                decoding="async">
+                    <div class="photo-slider" id="photoSlider">
+                        <button class="slider-btn slider-btn-prev" id="sliderPrev" aria-label="Назад">&#8592;</button>
+
+                        <div class="slider-track-wrapper">
+                            <div class="slider-track" id="sliderTrack">
+                                <!-- Slide 1 -->
+                                <div class="slider-slide">
+                                    <img src="assets/test1.jpeg"  alt="Фото 1"  loading="lazy">
+                                    <img src="assets/test2.jpeg"  alt="Фото 2"  loading="lazy">
+                                    <img src="assets/test3.jpeg"  alt="Фото 3"  loading="lazy">
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="slider-slide">
+                                    <img src="assets/test7.jpeg"  alt="Фото 4"  loading="lazy">
+                                    <img src="assets/test9.jpeg"  alt="Фото 5"  loading="lazy">
+                                    <img src="assets/test10.jpeg" alt="Фото 6"  loading="lazy">
+                                </div>
+                                <!-- Slide 3 -->
+                                <div class="slider-slide">
+                                    <img src="assets/test11.jpeg" alt="Фото 7"  loading="lazy">
+                                    <img src="assets/test1.jpeg"  alt="Фото 8"  loading="lazy">
+                                    <img src="assets/test2.jpeg"  alt="Фото 9"  loading="lazy">
+                                </div>
+                                <!-- Slide 4 -->
+                                <div class="slider-slide">
+                                    <img src="assets/test3.jpeg"  alt="Фото 10" loading="lazy">
+                                    <img src="assets/test7.jpeg"  alt="Фото 11" loading="lazy">
+                                    <img src="assets/test9.jpeg"  alt="Фото 12" loading="lazy">
+                                </div>
+                                <!-- Slide 5 -->
+                                <div class="slider-slide">
+                                    <img src="assets/test10.jpeg" alt="Фото 13" loading="lazy">
+                                    <img src="assets/test11.jpeg" alt="Фото 14" loading="lazy">
+                                    <img src="assets/test1.jpeg"  alt="Фото 15" loading="lazy">
+                                </div>
+                                <!-- Slide 6 -->
+                                <div class="slider-slide">
+                                    <img src="assets/test2.jpeg"  alt="Фото 16" loading="lazy">
+                                    <img src="assets/test3.jpeg"  alt="Фото 17" loading="lazy">
+                                    <img src="assets/test7.jpeg"  alt="Фото 18" loading="lazy">
+                                </div>
+                                <!-- Slide 7 -->
+                                <div class="slider-slide">
+                                    <img src="assets/test9.jpeg"  alt="Фото 19" loading="lazy">
+                                    <img src="assets/test10.jpeg" alt="Фото 20" loading="lazy">
+                                    <img src="assets/test11.jpeg" alt="Фото 21" loading="lazy">
+                                </div>
+                                <!-- Slide 8 -->
+                                <div class="slider-slide">
+                                    <img src="assets/test1.jpeg"  alt="Фото 22" loading="lazy">
+                                    <img src="assets/test2.jpeg"  alt="Фото 23" loading="lazy">
+                                    <img src="assets/test3.jpeg"  alt="Фото 24" loading="lazy">
+                                </div>
+                                <!-- Slide 9 -->
+                                <div class="slider-slide">
+                                    <img src="assets/test7.jpeg"  alt="Фото 25" loading="lazy">
+                                    <img src="assets/test9.jpeg"  alt="Фото 26" loading="lazy">
+                                    <img src="assets/test10.jpeg" alt="Фото 27" loading="lazy">
+                                </div>
+                                <!-- Slide 10 -->
+                                <div class="slider-slide">
+                                    <img src="assets/test11.jpeg" alt="Фото 28" loading="lazy">
+                                    <img src="assets/test1.jpeg"  alt="Фото 29" loading="lazy">
+                                    <img src="assets/test2.jpeg"  alt="Фото 30" loading="lazy">
+                                </div>
+                            </div>
                         </div>
-                        <!-- Slide 2 (3 photos) -->
-                        <div class="gallery-slide">
-                            <img src="assets/test7.jpeg" alt="Festival Image 4" height="350" width="250" loading="lazy"
-                                decoding="async">
-                            <img src="assets/test9.jpeg" alt="Festival Image 5" height="350" width="250" loading="lazy"
-                                decoding="async">
-                            <img src="assets/test10.jpeg" alt="Festival Image 6" height="350" width="250" loading="lazy"
-                                decoding="async">
-                        </div>
-                        <!-- Slide 3 (3 photos) -->
-                        <div class="gallery-slide">
-                            <img src="assets/test11.jpeg" alt="Festival Image 7" height="350" width="250" loading="lazy"
-                                decoding="async">
-                            <img src="assets/test1.jpeg" alt="Festival Image 8" height="350" width="250" loading="lazy"
-                                decoding="async">
-                            <img src="assets/test2.jpeg" alt="Festival Image 9" height="350" width="250" loading="lazy"
-                                decoding="async">
-                        </div>
+
+                        <button class="slider-btn slider-btn-next" id="sliderNext" aria-label="Вперёд">&#8594;</button>
+
+                        <!-- Dots -->
+                        <div class="slider-dots" id="sliderDots"></div>
                     </div>
                 </div>
             </div>
