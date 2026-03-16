@@ -229,7 +229,7 @@ a {
     position: relative;
     padding-top: 150px;
     padding-bottom: 80px;
-    background-image: url('assets/hero_bg_colored.png');
+    background-image: url('assets/hero_bg_colored.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -461,7 +461,7 @@ a {
 }
 
 .section:nth-of-type(odd) {
-    background-image: url('assets/hero_bg_colored.png');
+    background-image: url('assets/hero_bg_colored.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
