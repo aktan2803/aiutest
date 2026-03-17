@@ -42,7 +42,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
     width: 100%;
     max-width: 100vw;
@@ -100,14 +101,16 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
-    width: 100%; /* Ensure it doesn't expand */
+    width: 100%;
+    /* Ensure it doesn't expand */
 }
 
 .container-large {
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 40px;
-    width: 100%; /* Ensure it doesn't expand */
+    width: 100%;
+    /* Ensure it doesn't expand */
 }
 
 .text-accent {
@@ -361,7 +364,7 @@ a {
 
 .hero-banner-bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /*space-between*/
     align-items: center;
     gap: 30px;
     padding-top: 60px;
@@ -401,8 +404,13 @@ a {
 
 /* Separate opacity-only fade for hero card (so JS can control transform freely) */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* ==================== 
@@ -620,7 +628,8 @@ a {
 /* Dots */
 .slider-dots {
     position: absolute;
-    bottom: -30px; /* Put dots just below the gallery */
+    bottom: -30px;
+    /* Put dots just below the gallery */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -769,10 +778,8 @@ a {
 }
 
 .partner-logo-box {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 15px;
     padding: 20px 30px;
     display: flex;
@@ -785,16 +792,15 @@ a {
 }
 
 .partner-logo-box img {
-    max-height: 130px;
+    max-height: 140px;
     max-width: 100%;
     object-fit: contain;
-    opacity: 0.8;
     transition: var(--transition);
 }
 
 .partner-logo-box:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgb(255, 255, 255);
 }
 
 .partner-logo-box:hover img {
@@ -817,9 +823,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Center horizontally */
     text-align: center;
-    /* Center text content */
     padding: 20px 30px;
     background-size: cover;
     background-position: center;
@@ -828,10 +832,32 @@ a {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.program-card-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
 .program-card h4 {
     font-size: 1.2rem;
     color: white;
     font-weight: 700;
+    margin: 0;
+}
+
+.program-time {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 3px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
 .program-card:hover {
@@ -1182,7 +1208,8 @@ a {
     }
 
     .hero-banner-card {
-        width: 1520px; /* Keep this for JS scaling */
+        width: 1520px;
+        /* Keep this for JS scaling */
         flex-shrink: 0;
         transform-origin: top left;
     }
