@@ -47,8 +47,18 @@
                 <!-- Top Row: Logo, Title, Hashtag -->
                 <!-- Top Row: Logo, Title & Subtitle, Hashtag & Date -->
                 <div class="hero-banner-top">
-                    <img src="assets/logo.png" alt="Ala-Too Logo" width="400" height="400" class="banner-logo-main"
-                        decoding="async">
+                    <div class="hero-logo-col"
+                        style="display: flex; flex-direction: column; align-items: center; gap: 0; margin-top: -100px;">
+                        <img src="assets/logo.png" alt="Ala-Too Logo" width="400" height="400" class="banner-logo-main"
+                            decoding="async">
+                        <div
+                            style="display: flex; gap: 30px; justify-content: center; align-items: center; margin-top: 0px;">
+                            <img src="assets/maarif.png" alt="Maarif" width="130" height="auto" loading="lazy"
+                                decoding="async">
+                            <img src="assets/sapat.png" alt="Sapat" width="130" height="auto" loading="lazy"
+                                decoding="async">
+                        </div>
+                    </div>
 
                     <div class="hero-text-col hero-title-col">
                         <div class="banner-text-center">
@@ -59,23 +69,46 @@
 
                     <div class="hero-text-col hero-hash-col">
                         <div class="banner-text-hashtag">
-                            <span class="hash">#</span><span class="text">AIU<br>FEST</span>
+                            <span class="hash">#</span>
+                            <div class="text">
+                                <span class="aiu">AIU20</span>
+                                <span class="fest">FEST26</span>
+                            </div>
                         </div>
                         <div class="banner-date">18 АПРЕЛЯ</div>
                     </div>
                 </div>
                 <!-- Bottom Row: Sponsor Logos -->
                 <div class="hero-banner-bottom">
-                    <div class="sponsors-label">Спонсоры</div>
-                    <!-- <img src="assets/logo-demir.jpeg" alt="DemirBank" width="160" height="80" loading="lazy"
-                        decoding="async"> -->
-                    <!-- <img src="assets/logo-dodo.jpeg" alt="Dodo Pizza" width="160" height="80" loading="lazy"
-                        decoding="async"> -->
-                    <img src="assets/logo-cci.jpeg" alt="CCI Kyrgyzstan" width="160" height="80" loading="lazy"
-                        decoding="async">
-                    <!-- <img src="assets/logo-obank.jpeg" alt="O! Bank" width="160" height="80" loading="lazy"
-                        decoding="async"> -->
-                    <img src="assets/maarif.png" alt="Maarif" width="160" height="80" loading="lazy" decoding="async">
+                    <div class="sponsor-group">
+                        <div class="sponsors-label">Генеральный спонсор</div>
+                        <!-- example: CCI & Shoro -->
+                        <div style="display: flex; gap: 20px; flex-wrap: nowrap; justify-content: center;">
+                            <div class="partner-logo-box gold-hero-box">
+                                <img src="assets/logo-cci.jpeg" alt="CCI Kyrgyzstan" width="220" height="130"
+                                    loading="lazy" decoding="async">
+                            </div>
+                            <div class="partner-logo-box gold-hero-box">
+                                <img src="assets/shoro.png" alt="Shoro" width="220" height="130" loading="lazy"
+                                    decoding="async">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sponsor-group">
+                        <div class="sponsors-label">Спонсоры</div>
+                        <!-- example: Optima & Demir -->
+                        <div style="display: flex; gap: 20px; flex-wrap: nowrap; justify-content: center;">
+                            <div class="partner-logo-box gold-hero-box">
+                                <img src="assets/optimabank.svg" alt="Optima Bank" width="220" height="130"
+                                    loading="lazy" decoding="async">
+                            </div>
+                            <div class="partner-logo-box gold-hero-box">
+                                <img src="assets/logo-demir.jpeg" alt="Demir Bank" width="220" height="130"
+                                    loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,10 +146,13 @@
                 </div>
 
                 <!-- Map Column -->
-                <div class="map-column">
+                <div class="map-column" style="margin-bottom: 60px;">
                     <h2 class="section-title text-uppercase mb-4" style="color: white;">Карта локаций</h2>
-                    <div class="map-blank-card">
-                        <h2>КАРТА</h2>
+                    <div class="map-image-wrapper" style="border-radius: 16px; overflow: hidden; height: 100%; background: #000;
+                     display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/map.jpeg" alt="Карта локаций"
+                            style="max-width: 100%; max-height: 100%; object-fit: contain; display: block;"
+                            loading="lazy">
                     </div>
                 </div>
             </div>
@@ -134,15 +170,17 @@
             <h2 class="section-title text-uppercase mb-5" style="color: white;">Наши Партнеры</h2>
             <div class="partners-logo-grid">
                 <div class="partner-logo-box">
-                    <img src="assets/shoro.png" alt="Shoro" width="220" height="130" loading="lazy" decoding="async">
+                    <img src="assets/maarif.png" alt="maarif" width="220" height="130" loading="lazy" decoding="async">
+                </div>
+                <div class="partner-logo-box">
+                    <img src="assets/sapat.png" alt="sapat" width="220" height="130" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-box">
                     <img src="assets/logo-demir.jpeg" alt="DemirBank" width="220" height="130" loading="lazy"
                         decoding="async">
                 </div>
                 <div class="partner-logo-box">
-                    <img src="assets/optimabank.svg" alt="optimabank" width="220" height="130" loading="lazy"
-                        decoding="async">
+                    <img src="assets/shoro.png" alt="shoro" width="220" height="130" loading="lazy" decoding="async">
                 </div>
                 <div class="partner-logo-box">
                     <img src="assets/bailykfinance.svg" alt="bailykfinance" width="220" height="130" loading="lazy"
@@ -262,6 +300,7 @@
                         <button class="slider-btn slider-btn-prev" id="sliderPrev" aria-label="Назад">&#8592;</button>
 
                         <div class="slider-track-wrapper">
+                            <div class="pres-frame-glow"></div>
                             <div class="slider-track" id="sliderTrack">
                                 <!-- Slide 1 -->
                                 <div class="slider-slide">
@@ -271,57 +310,57 @@
                                 </div>
                                 <!-- Slide 2 -->
                                 <div class="slider-slide">
-                                    <img src="assets/test7.jpeg" alt="Фото 4" loading="lazy">
-                                    <img src="assets/test9.jpeg" alt="Фото 5" loading="lazy">
-                                    <img src="assets/test10.jpeg" alt="Фото 6" loading="lazy">
+                                    <img src="assets/test4.jpeg" alt="Фото 4" loading="lazy">
+                                    <img src="assets/test5.jpeg" alt="Фото 5" loading="lazy">
+                                    <img src="assets/test6.jpeg" alt="Фото 6" loading="lazy">
                                 </div>
                                 <!-- Slide 3 -->
                                 <div class="slider-slide">
-                                    <img src="assets/test11.jpeg" alt="Фото 7" loading="lazy">
-                                    <img src="assets/test1.jpeg" alt="Фото 8" loading="lazy">
-                                    <img src="assets/test2.jpeg" alt="Фото 9" loading="lazy">
+                                    <img src="assets/test7.jpeg" alt="Фото 7" loading="lazy">
+                                    <img src="assets/test8.jpeg" alt="Фото 8" loading="lazy">
+                                    <img src="assets/test9.jpeg" alt="Фото 9" loading="lazy">
                                 </div>
                                 <!-- Slide 4 -->
                                 <div class="slider-slide">
-                                    <img src="assets/test3.jpeg" alt="Фото 10" loading="lazy">
-                                    <img src="assets/test7.jpeg" alt="Фото 11" loading="lazy">
-                                    <img src="assets/test9.jpeg" alt="Фото 12" loading="lazy">
+                                    <img src="assets/test10.jpeg" alt="Фото 10" loading="lazy">
+                                    <img src="assets/test11.jpeg" alt="Фото 11" loading="lazy">
+                                    <img src="assets/test1.jpeg" alt="Фото 12" loading="lazy">
                                 </div>
                                 <!-- Slide 5 -->
                                 <div class="slider-slide">
-                                    <img src="assets/test10.jpeg" alt="Фото 13" loading="lazy">
-                                    <img src="assets/test11.jpeg" alt="Фото 14" loading="lazy">
-                                    <img src="assets/test1.jpeg" alt="Фото 15" loading="lazy">
+                                    <img src="assets/test2.jpeg" alt="Фото 13" loading="lazy">
+                                    <img src="assets/test3.jpeg" alt="Фото 14" loading="lazy">
+                                    <img src="assets/test4.jpeg" alt="Фото 15" loading="lazy">
                                 </div>
                                 <!-- Slide 6 -->
                                 <div class="slider-slide">
-                                    <img src="assets/test2.jpeg" alt="Фото 16" loading="lazy">
-                                    <img src="assets/test3.jpeg" alt="Фото 17" loading="lazy">
+                                    <img src="assets/test5.jpeg" alt="Фото 16" loading="lazy">
+                                    <img src="assets/test6.jpeg" alt="Фото 17" loading="lazy">
                                     <img src="assets/test7.jpeg" alt="Фото 18" loading="lazy">
                                 </div>
                                 <!-- Slide 7 -->
                                 <div class="slider-slide">
-                                    <img src="assets/test9.jpeg" alt="Фото 19" loading="lazy">
-                                    <img src="assets/test10.jpeg" alt="Фото 20" loading="lazy">
-                                    <img src="assets/test11.jpeg" alt="Фото 21" loading="lazy">
+                                    <img src="assets/test8.jpeg" alt="Фото 19" loading="lazy">
+                                    <img src="assets/test9.jpeg" alt="Фото 20" loading="lazy">
+                                    <img src="assets/test10.jpeg" alt="Фото 21" loading="lazy">
                                 </div>
                                 <!-- Slide 8 -->
                                 <div class="slider-slide">
-                                    <img src="assets/test1.jpeg" alt="Фото 22" loading="lazy">
-                                    <img src="assets/test2.jpeg" alt="Фото 23" loading="lazy">
-                                    <img src="assets/test3.jpeg" alt="Фото 24" loading="lazy">
+                                    <img src="assets/test11.jpeg" alt="Фото 22" loading="lazy">
+                                    <img src="assets/test1.jpeg" alt="Фото 23" loading="lazy">
+                                    <img src="assets/test2.jpeg" alt="Фото 24" loading="lazy">
                                 </div>
                                 <!-- Slide 9 -->
                                 <div class="slider-slide">
-                                    <img src="assets/test7.jpeg" alt="Фото 25" loading="lazy">
-                                    <img src="assets/test9.jpeg" alt="Фото 26" loading="lazy">
-                                    <img src="assets/test10.jpeg" alt="Фото 27" loading="lazy">
+                                    <img src="assets/test3.jpeg" alt="Фото 25" loading="lazy">
+                                    <img src="assets/test4.jpeg" alt="Фото 26" loading="lazy">
+                                    <img src="assets/test5.jpeg" alt="Фото 27" loading="lazy">
                                 </div>
                                 <!-- Slide 10 -->
                                 <div class="slider-slide">
-                                    <img src="assets/test11.jpeg" alt="Фото 28" loading="lazy">
-                                    <img src="assets/test1.jpeg" alt="Фото 29" loading="lazy">
-                                    <img src="assets/test2.jpeg" alt="Фото 30" loading="lazy">
+                                    <img src="assets/test6.jpeg" alt="Фото 28" loading="lazy">
+                                    <img src="assets/test7.jpeg" alt="Фото 29" loading="lazy">
+                                    <img src="assets/test8.jpeg" alt="Фото 30" loading="lazy">
                                 </div>
                             </div>
                         </div>
