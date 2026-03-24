@@ -102,7 +102,6 @@ a {
     margin: 0 auto;
     padding: 0 24px;
     width: 100%;
-    /* Ensure it doesn't expand */
 }
 
 .container-large {
@@ -110,7 +109,6 @@ a {
     margin: 0 auto;
     padding: 0 40px;
     width: 100%;
-    /* Ensure it doesn't expand */
 }
 
 .text-accent {
@@ -143,7 +141,6 @@ a {
     background: var(--accent-color);
     color: white;
     border-radius: 8px;
-    /* Sharper corners like reference */
     box-shadow: var(--shadow-md);
 }
 
@@ -178,7 +175,6 @@ a {
     padding: 15px 0;
     transition: var(--transition);
     background: rgba(255, 255, 255, 0.5);
-    /* Light glassy background */
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -188,7 +184,6 @@ a {
     background: rgba(255, 255, 255, 0.9);
     padding: 10px 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    /* Soft shadow */
 }
 
 .nav-container {
@@ -202,7 +197,6 @@ a {
     height: var(--logo-size-nav);
     object-fit: contain;
     border-radius: 50%;
-    /* Ensuring circular look if image is square */
 }
 
 .logo-text {
@@ -230,7 +224,6 @@ a {
     font-size: 0.95rem;
     font-weight: 500;
     color: #111827;
-    /* Dark text for light mode header */
 }
 
 .nav-links a:hover {
@@ -256,7 +249,7 @@ a {
 .hero-banner-card {
     background: #ffffff;
     border-radius: 30px;
-    padding: 80px 60px;
+    padding: 80px 20px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
     width: 100%;
     margin: 0 auto;
@@ -289,6 +282,9 @@ a {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
+    bottom: 70px;
+    margin-right: 60px;
 }
 
 .banner-logo-main {
@@ -300,11 +296,11 @@ a {
 .banner-text-center {
     text-align: left;
     margin-bottom: 90px;
+    margin-top: -100px;
 }
 
 .banner-text-center h2 {
     color: #1e1b4b;
-    /* Dark text */
     font-weight: 600;
     font-size: 4.5rem;
     line-height: 1.1;
@@ -314,10 +310,9 @@ a {
 
 .banner-subtitle {
     color: #df2029;
-    /* AIU Red */
-    font-size: 2rem;
-    font-weight: 800;
-    margin-top: 10px;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 1px;
     letter-spacing: 2px;
 }
 
@@ -331,59 +326,74 @@ a {
 
 .banner-text-hashtag {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     color: #df2029;
-    /* Red */
     font-weight: 900;
-    line-height: 0.9;
+    -webkit-text-stroke: 4px #df2029;
+    line-height: 0.82;
     margin-bottom: 90px;
 }
 
 .banner-text-hashtag .hash {
-    font-size: 4.5rem;
-    margin-right: 5px;
-    position: relative;
-    top: 75px;
-    /* Shifts hash down without changing container height */
+    font-size: 5.5rem;
+    font-weight: 900;
+    margin-right: 8px;
+    margin-bottom: 60px;
+    line-height: 0.8;
 }
 
 .banner-text-hashtag .text {
+    display: flex;
+    flex-direction: column;
+    letter-spacing: -3px;
+    text-align: left;
+}
+
+.banner-text-hashtag .text .aiu {
     font-size: 7.5rem;
-    letter-spacing: -2px;
+    line-height: 0.77;
+}
+
+.banner-text-hashtag .text .fest {
+    font-size: 6rem;
+    line-height: 0.8;
 }
 
 .banner-date {
     color: #1e1b4b;
-    /* Dark text */
     font-weight: 600;
     font-size: 3rem;
     line-height: 1.1;
     text-align: center;
     white-space: nowrap;
+    margin-top: 40px;
 }
 
 .hero-banner-bottom {
     display: flex;
     justify-content: center;
-    /*space-between*/
-    align-items: center;
-    gap: 30px;
+    align-items: flex-start;
+    gap: 320px;
     padding-top: 60px;
     border-top: 2px solid #f0f0f0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+}
+
+.sponsor-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
 .sponsors-label {
-    flex-basis: 100%;
     text-align: center;
     font-size: 2rem;
-    /* Increased size */
     font-weight: 600;
     color: #1e1b4b;
     -webkit-text-stroke: 2px #1e1b4b;
-    /* Artificial extra thickness */
-    letter-spacing: 4px;
-    margin-bottom: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
 .hero-banner-bottom img {
@@ -403,7 +413,6 @@ a {
     }
 }
 
-/* Separate opacity-only fade for hero card (so JS can control transform freely) */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -496,7 +505,6 @@ a {
 
 
 .bg-card {
-    /* Frosted glass effect / "за пеленой" */
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
@@ -545,7 +553,6 @@ a {
     overflow: hidden;
 }
 
-/* Photo Slider Styles */
 .photo-slider {
     position: relative;
     width: 100%;
@@ -555,16 +562,21 @@ a {
 }
 
 .slider-track-wrapper {
+    position: relative;
     overflow: hidden;
     width: 100%;
     height: 100%;
-    border-radius: 16px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: #000;
 }
 
 .slider-track {
+    position: relative;
     display: flex;
     height: 100%;
     transition: transform 0.4s ease-in-out;
+    z-index: 2;
 }
 
 .slider-slide {
@@ -626,11 +638,9 @@ a {
     right: 10px;
 }
 
-/* Dots */
 .slider-dots {
     position: absolute;
     bottom: -30px;
-    /* Put dots just below the gallery */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -676,13 +686,11 @@ a {
     text-align: center;
     margin-top: 60px;
     flex-wrap: wrap;
-    /* Important for preventing overflow on mobile */
 }
 
 .stat-item {
     padding: 10px;
     flex: 1 1 120px;
-    /* Allows items to shrink/grow and flow to the next line */
 }
 
 .stat-num {
@@ -800,6 +808,19 @@ a {
 .partner-logo-box:hover {
     transform: translateY(-5px);
     background: rgb(255, 255, 255);
+}
+
+.gold-hero-box {
+    background: #ffffff;
+    border: 2px solid #FFD000;
+    box-shadow: 0 8px 32px rgba(255, 215, 0, 0.4);
+}
+
+.gold-hero-box:hover {
+    background: #ffffff;
+    border: 2px solid #FFA500;
+    box-shadow: 0 12px 40px rgba(255, 215, 0, 0.6);
+    transform: translateY(-5px);
 }
 
 .partner-logo-box:hover img {
@@ -1188,12 +1209,12 @@ a {
     }
 }
 
-/* Hero scaling on tablets & mobile — JS sets the actual scale value */
-@media (max-width: 992px) {
+
+@media (max-width: 1520px) {
     .container-large {
         width: 100% !important;
         max-width: 100vw !important;
-        overflow: hidden !important;
+        overflow-x: hidden !important;
         padding: 0 20px;
         position: relative;
     }
@@ -1201,18 +1222,12 @@ a {
     .hero {
         width: 100% !important;
         max-width: 100vw !important;
-        overflow: hidden !important;
-        padding-top: 120px;
+        overflow-x: hidden !important;
+        padding-top: 170px;
         padding-bottom: 40px;
     }
-
-    .hero-banner-card {
-        width: 1520px;
-        /* Keep this for JS scaling */
-        flex-shrink: 0;
-        transform-origin: top left;
-    }
 }
+
 
 @media (max-width: 768px) {
 
@@ -1327,7 +1342,7 @@ a {
 
 @media (max-width: 480px) {
     .hero {
-        padding-top: 130px;
+        padding-top: 180px;
         padding-bottom: 20px;
     }
 
