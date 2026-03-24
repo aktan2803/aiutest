@@ -101,7 +101,7 @@
   <section class="pres-section" id="presentation">
     <div class="pres-frame-wrap" id="pres-slider">
       <div class="pres-frame-glow"></div>
-      
+
       <!-- Internal Slider Container -->
       <div class="pres-slider-track">
         <img src="presentation/1.jpeg" alt="Slide 1" class="pres-slide active">
@@ -182,16 +182,16 @@
         'Партнер': 'partner'
       };
       const select = document.getElementById('pkg-type');
-      if(select) select.value = map[name] || '';
+      if (select) select.value = map[name] || '';
       const form = document.getElementById('contact-form');
-      if(form) form.scrollIntoView({ behavior: 'smooth' });
+      if (form) form.scrollIntoView({ behavior: 'smooth' });
     }
 
     /* Form submit */
     function handleSubmit(e) {
       e.preventDefault();
       const btn = document.querySelector('.submit-btn');
-      if(btn) {
+      if (btn) {
         btn.textContent = '✓ Заявка отправлена!';
         btn.style.background = 'linear-gradient(135deg, #059669, #0284c7)';
         btn.disabled = true;
@@ -211,9 +211,9 @@
       presDots.forEach(d => d.classList.remove('active'));
 
       // Show current
-      if(presSlides[presCurrentSlide]) {
+      if (presSlides[presCurrentSlide]) {
         presSlides[presCurrentSlide].classList.add('active');
-        if(presDots[presCurrentSlide]) {
+        if (presDots[presCurrentSlide]) {
           presDots[presCurrentSlide].classList.add('active');
         }
       }
