@@ -1,17 +1,21 @@
 // ── Hero Banner Scaling ──────────────────────────────────────────────────────
-// CSS calc() cannot produce a unitless value from viewport units, so we use JS.
-// transform-origin is set to "top left" in CSS so scale anchors from the left edge.
 function scaleHeroBanner() {
     const card = document.querySelector('.hero-banner-card');
     if (!card) return;
 
-    const DESKTOP_W = 1520; // px — the fixed width set in CSS for mobile
+    const DESKTOP_W = 1520; // px — the natural design width of the card
+    const containerPad = 48; // 24px on each side
+    const availableW = window.innerWidth - containerPad;
 
-    if (window.innerWidth <= 992) {
-        const availableW = window.innerWidth - 48; // container padding (24px each side)
+    if (availableW < DESKTOP_W) {
         const scale = availableW / DESKTOP_W;
 
-        // Get the card's natural (unscaled) height BEFORE applying transform
+        // Force desktop width so it doesn't wrap before scaling
+        card.style.width = `${DESKTOP_W}px`;
+        card.style.maxWidth = `${DESKTOP_W}px`;
+        card.style.flexShrink = '0';
+
+        // Reset transform to measure natural height
         card.style.transform = '';
         card.style.marginBottom = '';
         const naturalH = card.offsetHeight;
@@ -19,12 +23,16 @@ function scaleHeroBanner() {
         const scaledH = naturalH * scale;
         const deadSpace = scaledH - naturalH; // negative number
 
-        // transform-origin: top left — no horizontal shift needed, only fix vertical dead space
         card.style.transform = `scale(${scale})`;
+        card.style.transformOrigin = 'top left';
         card.style.marginBottom = `${deadSpace}px`;
     } else {
-        // Reset on desktop
+        // Full size on desktop
+        card.style.width = '';
+        card.style.maxWidth = '';
+        card.style.flexShrink = '';
         card.style.transform = '';
+        card.style.transformOrigin = '';
         card.style.marginBottom = '';
     }
 }
