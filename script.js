@@ -3,32 +3,28 @@ function scaleHeroBanner() {
     const card = document.querySelector('.hero-banner-card');
     if (!card) return;
 
-    const DESKTOP_W = 1520; // px — the natural design width of the card
-    const containerPad = 48; // 24px on each side
-    const MIN_W = 390;       // minimum viewport width before we stop scaling (iPhone size)
+    const DESKTOP_W = 1520;
+    const containerPad = 48;
+    const MIN_W = 390;
     const availableW = Math.max(window.innerWidth - containerPad, MIN_W - containerPad);
 
     if (window.innerWidth - containerPad < DESKTOP_W) {
         const scale = availableW / DESKTOP_W;
 
-        // Force desktop width so it doesn't wrap before scaling
         card.style.width = `${DESKTOP_W}px`;
         card.style.maxWidth = `${DESKTOP_W}px`;
         card.style.flexShrink = '0';
-
-        // Reset transform to measure natural height
         card.style.transform = '';
         card.style.marginBottom = '';
         const naturalH = card.offsetHeight;
 
         const scaledH = naturalH * scale;
-        const deadSpace = scaledH - naturalH; // negative number
+        const deadSpace = scaledH - naturalH;
 
         card.style.transform = `scale(${scale})`;
         card.style.transformOrigin = 'top left';
         card.style.marginBottom = `${deadSpace}px`;
     } else {
-        // Full size on desktop
         card.style.width = '';
         card.style.maxWidth = '';
         card.style.flexShrink = '';
@@ -38,15 +34,13 @@ function scaleHeroBanner() {
     }
 }
 
-// Run after DOM + after full page load (images affect card height)
 document.addEventListener('DOMContentLoaded', () => requestAnimationFrame(scaleHeroBanner));
 window.addEventListener('load', scaleHeroBanner);
 window.addEventListener('resize', scaleHeroBanner);
-// ─────────────────────────────────────────────────────────────────────────────
+
 
 document.addEventListener('DOMContentLoaded', () => {
-    scaleHeroBanner(); // run again after full DOM is ready
-    // Smooth scrolling for anchor links
+    scaleHeroBanner();
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -122,21 +116,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(response => response.json())
                 .then(data => {
                     formMsg.innerHTML = 'Спасибо за регистрацию!';
-                    formMsg.style.color = '#10b981'; // success green
+                    formMsg.style.color = '#10b981';
                     regForm.reset();
                     btn.innerHTML = 'Зарегистрироваться';
                     btn.disabled = false;
                 })
                 .catch(error => {
                     formMsg.innerHTML = 'Произошла ошибка при отправке.';
-                    formMsg.style.color = '#ff4d4f'; // error red
+                    formMsg.style.color = '#ff4d4f';
                     btn.innerHTML = 'Зарегистрироваться';
                     btn.disabled = false;
                 });
         });
     }
 
-    // ── Photo Slider (manual prev/next, no auto-scroll) ───────────────────────
+    // Photo Slider
     const sliderTrack  = document.getElementById('sliderTrack');
     const sliderPrev   = document.getElementById('sliderPrev');
     const sliderNext   = document.getElementById('sliderNext');
@@ -147,7 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const total      = slides.length;
         let   current    = 0;
 
-        // Build dots
         slides.forEach((_, i) => {
             const dot = document.createElement('button');
             dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
@@ -173,7 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
         sliderPrev.addEventListener('click', () => goTo(current - 1));
         sliderNext.addEventListener('click', () => goTo(current + 1));
 
-        // Touch / swipe support
         let touchStartX = 0;
         sliderTrack.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
         sliderTrack.addEventListener('touchend', e => {
@@ -186,14 +178,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // ─────────────────────────────────────────────────────────────────────────
 
-    // ── Expanding Gallery: tap to open on touch devices ───────────────────────
     const expandCards = document.querySelectorAll('.expand-card');
     expandCards.forEach(card => {
         card.addEventListener('click', () => {
             const isAlreadyActive = card.classList.contains('active');
-            // Close all cards first
             expandCards.forEach(c => c.classList.remove('active'));
-            // If it wasn't active before, open it; if it was, leave all closed
             if (!isAlreadyActive) {
                 card.classList.add('active');
             }
