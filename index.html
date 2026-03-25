@@ -2,451 +2,259 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIU FEST 2026 | Международный университет Ала-Тоо</title>
-    <meta name="description"
-        content="День открытых дверей AIU FEST 2026: масштабное событие для абитуриентов, студентов и работодателей.">
-    <link rel="icon" type="image/png" href="assets/logo.png">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2.1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Стать партнером — AIU Fest 2026</title>
+  <meta name="description" content="Станьте партнёром AIU Fest 2026 — выберите спонсорский пакет и заполните заявку." />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50'
+     cy='50' r='48' fill='%23c8102e' stroke='white' stroke-width='4'/%3E%3Ctext x='50' y='58' font-family='Arial'
+      font-size='28' font-weight='900' fill='white' text-anchor='middle'%3EAIU%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=2.1" />
 </head>
 
 <body>
-    <!-- Header / Navbar -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <img src="assets/logo.png" alt="AIU Fest Logo" width="90" height="90">
-            </a>
-            <nav class="nav-links">
-                <a href="#hero">О мероприятии</a>
-                <a href="#program">Программа</a>
-                <a href="#partners">Партнеры</a>
-                <a href="#gallery">Что ждет</a>
-                <a href="#about">Галерея</a>
-                <a href="#contacts">Контакты</a>
-                <a href="#guests-partners" class="btn btn-primary btn-sm mobile-only-btn"
-                    style="display:none;">Регистрация</a>
-            </nav>
-            <div class="nav-actions">
-                <a href="#guests-partners" class="btn btn-primary btn-sm desktop-btn">Регистрация</a>
-                <button class="nav-toggle" aria-label="Toggle Navigation">☰</button>
-            </div>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="AIU Fest Logo" width="90" height="90" />
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#hero">О мероприятии</a>
+        <a href="index.html#program">Программа</a>
+        <a href="index.html#partners">Партнеры</a>
+        <a href="index.html#gallery">Что ждет</a>
+        <a href="index.html#about">Галерея</a>
+        <a href="index.html#contacts">Контакты</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="index.html#guests-partners" class="btn btn-primary btn-sm desktop-btn">Регистрация</a>
+        <button class="nav-toggle" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Sponsorship Packages -->
+  <section class="packages-section">
+    <div class="container text-center">
+      <h2 class="section-title text-uppercase" style="color: white; margin-bottom: 12px;">Спонсорские пакеты</h2>
+      <div class="section-divider"></div>
+
+      <div class="packages-grid">
+
+        <!-- Gold -->
+        <div class="pkg-card gold" onclick="selectPackage('Генеральный спонсор')">
+          <div class="pkg-orb"></div>
+          <span class="pkg-badge">Генеральный спонсор</span>
+          <div class="pkg-price">200 000 <span>сом</span></div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-perks">
+            <li>Логотип на главном баннере</li>
+            <li>Эксклюзивная зона бренда</li>
+            <li>10 мин. выступление на сцене</li>
+            <li>Упоминание во всех PR-материалах</li>
+            <li>Реклама в соцсетях (5 000 000+ охват)</li>
+            <li>VIP-пропуски (10 шт.)</li>
+          </ul>
+
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="container-large">
-            <div class="hero-banner-card">
-                <!-- Top Row: Logo, Title, Hashtag -->
-                <!-- Top Row: Logo, Title & Subtitle, Hashtag & Date -->
-                <div class="hero-banner-top">
-                    <div class="hero-logo-col"
-                        style="display: flex; flex-direction: column; align-items: center; gap: 0; margin-top: -100px;">
-                        <img src="assets/logo.png" alt="Ala-Too Logo" width="400" height="400" class="banner-logo-main"
-                            decoding="async">
-                        <div
-                            style="display: flex; gap: 30px; justify-content: center; align-items: center; margin-top: 0px;">
-                            <img src="assets/maarif.png" alt="Maarif" width="130" height="auto" loading="lazy"
-                                decoding="async">
-                            <img src="assets/sapat.png" alt="Sapat" width="130" height="auto" loading="lazy"
-                                decoding="async">
-                        </div>
-                    </div>
+        <!-- Silver -->
+        <div class="pkg-card silver" onclick="selectPackage('Официальный партнер')">
+          <div class="pkg-orb"></div>
+          <span class="pkg-badge">Официальный партнер</span>
+          <div class="pkg-price">100 000 <span>сом</span></div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-perks">
+            <li>Логотип на партнёрском баннере</li>
+            <li>Брендированная стойка</li>
+            <li>Упоминание в соцсетях</li>
+            <li>Раздача промо-материалов</li>
+            <li>VIP-пропуски (5 шт.)</li>
+          </ul>
 
-                    <div class="hero-text-col hero-title-col">
-                        <div class="banner-text-center">
-                            <h2>ДЕНЬ<br>ОТКРЫТЫХ<br>ДВЕРЕЙ</h2>
-                        </div>
-                        <div class="banner-subtitle">ЯРМАРКА ВАКАНСИЙ</div>
-                    </div>
-
-                    <div class="hero-text-col hero-hash-col">
-                        <div class="banner-text-hashtag">
-                            <span class="hash">#</span>
-                            <div class="text">
-                                <span class="aiu">AIU20</span>
-                                <span class="fest">FEST26</span>
-                            </div>
-                        </div>
-                        <div class="banner-date">18 АПРЕЛЯ</div>
-                    </div>
-                </div>
-                <!-- Bottom Row: Sponsor Logos -->
-                <div class="hero-banner-bottom">
-                    <div class="sponsor-group">
-                        <div class="sponsors-label">Генеральный спонсор</div>
-                        <!-- example: CCI & Shoro -->
-                        <div style="display: flex; gap: 20px; flex-wrap: nowrap; justify-content: center;">
-                            <div class="partner-logo-box gold-hero-box">
-                                <img src="assets/logo-cci.jpeg" alt="CCI Kyrgyzstan" width="220" height="130"
-                                    loading="lazy" decoding="async">
-                            </div>
-                            <div class="partner-logo-box gold-hero-box">
-                                <img src="assets/shoro.png" alt="Shoro" width="220" height="130" loading="lazy"
-                                    decoding="async">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sponsor-group">
-                        <div class="sponsors-label">Спонсоры</div>
-                        <!-- example: Optima & Demir -->
-                        <div style="display: flex; gap: 20px; flex-wrap: nowrap; justify-content: center;">
-                            <div class="partner-logo-box gold-hero-box">
-                                <img src="assets/optimabank.svg" alt="Optima Bank" width="220" height="130"
-                                    loading="lazy" decoding="async">
-                            </div>
-                            <div class="partner-logo-box gold-hero-box">
-                                <img src="assets/logo-demir.jpeg" alt="Demir Bank" width="220" height="130"
-                                    loading="lazy" decoding="async">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
 
+        <!-- Bronze -->
+        <div class="pkg-card bronze" onclick="selectPackage('Партнер')">
+          <div class="pkg-orb"></div>
+          <span class="pkg-badge">Партнер</span>
+          <div class="pkg-price">50 000 <span>сом</span></div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-perks">
+            <li>Логотип на digital-баннере</li>
+            <li>Упоминание на мероприятии</li>
+            <li>Размещение флаера в пакете гостя</li>
+            <li>Пропуски (2 шт.)</li>
+          </ul>
 
-    <!-- Program & Map Section -->
-    <section class="section bg-card" id="program">
-        <div class="container">
-            <div class="program-map-grid">
-                <!-- Program Column -->
-                <div class="program-column">
-                    <h2 class="section-title text-uppercase mb-4" style="color: white;">Программа</h2>
-                    <div class="program-card"
-                        style="background-image: linear-gradient(rgba(43,17,84,0.7), rgba(43,17,84,0.7)), url('assets/hero.jpeg');">
-                        <div class="program-card-inner">
-                            <h4>ВСТРЕЧА С ФАКУЛЬТЕТАМИ</h4>
-                            <span class="program-time">10:00 – 12:00</span>
-                        </div>
-                    </div>
-                    <div class="program-card"
-                        style="background-image: linear-gradient(rgba(0,71,255,0.7), rgba(0,71,255,0.7)), url('assets/hero.jpeg');">
-                        <div class="program-card-inner">
-                            <h4>ЯРМАРКА ВАКАНСИЙ</h4>
-                            <span class="program-time">10:00 – 17:00</span>
-                        </div>
-                    </div>
-                    <div class="program-card"
-                        style="background-image: linear-gradient(rgba(236,72,153,0.7), rgba(236,72,153,0.7)), url('assets/hero.jpeg');">
-                        <div class="program-card-inner">
-                            <h4>КОНЦЕРТ</h4>
-                            <span class="program-time">15:00 – 17:00</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Map Column -->
-                <div class="map-column" style="margin-bottom: 60px;">
-                    <h2 class="section-title text-uppercase mb-4" style="color: white;">Карта локаций</h2>
-                    <div class="map-image-wrapper" style="border-radius: 16px; overflow: hidden; height: 100%; background: #000;
-                     display: flex; align-items: center; justify-content: center;">
-                        <img src="assets/map.jpeg" alt="Карта локаций"
-                            style="max-width: 100%; max-height: 100%; object-fit: contain; display: block;"
-                            loading="lazy">
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
 
+      </div>
+    </div>
+  </section>
 
+  <!-- Presentation Image Slider -->
+  <section class="pres-section" id="presentation">
+    <div class="pres-frame-wrap" id="pres-slider">
+      <div class="pres-frame-glow"></div>
 
+      <!-- Internal Slider Container -->
+      <div class="pres-slider-track">
+        <img src="presentation/1.jpeg" alt="Slide 1" class="pres-slide active">
+        <img src="presentation/2.jpeg" alt="Slide 2" class="pres-slide">
+        <img src="presentation/3.jpeg" alt="Slide 3" class="pres-slide">
+        <img src="presentation/4.jpeg" alt="Slide 4" class="pres-slide">
+        <img src="presentation/5.jpeg" alt="Slide 5" class="pres-slide">
+        <img src="presentation/6.jpeg" alt="Slide 6" class="pres-slide">
+        <img src="presentation/7.jpeg" alt="Slide 7" class="pres-slide">
+      </div>
 
+      <!-- Controls -->
+      <button class="pres-btn pres-prev" onclick="prevPresSlide()">❮</button>
+      <button class="pres-btn pres-next" onclick="nextPresSlide()">❯</button>
 
+      <!-- Dots -->
+      <div class="pres-dots">
+        <span class="pres-dot active" onclick="goPresSlide(0)"></span>
+        <span class="pres-dot" onclick="goPresSlide(1)"></span>
+        <span class="pres-dot" onclick="goPresSlide(2)"></span>
+        <span class="pres-dot" onclick="goPresSlide(3)"></span>
+        <span class="pres-dot" onclick="goPresSlide(4)"></span>
+        <span class="pres-dot" onclick="goPresSlide(5)"></span>
+        <span class="pres-dot" onclick="goPresSlide(6)"></span>
+      </div>
+    </div>
+  </section>
 
-    <!-- Sponsors & Partners Logos Section -->
-    <section class="section bg-card" id="partners">
-        <div class="container text-center">
-            <h2 class="section-title text-uppercase mb-5" style="color: white;">Наши Партнеры</h2>
-            <div class="partners-logo-grid">
-                <div class="partner-logo-box">
-                    <img src="assets/bailykfinance.svg" alt="bailykfinance" width="220" height="130" loading="lazy"
-                        decoding="async">
-                </div>
-                <div class="partner-logo-box">
-                    <img src="assets/bakai.png" alt="bakai" width="220" height="130" loading="lazy" decoding="async">
-                </div>
-                <div class="partner-logo-box">
-                    <img src="assets/forviz.svg" alt="forviz" width="220" height="130" loading="lazy" decoding="async">
-                </div>
-                <div class="partner-logo-box">
-                    <img src="assets/mbank.svg" alt="mbank" width="220" height="130" loading="lazy" decoding="async">
-                </div>
-                <div class="partner-logo-box">
-                    <img src="assets/Finca.png" alt="Finca" width="220" height="130" loading="lazy" decoding="async">
-                </div>
-                <div class="partner-logo-box">
-                    <img src="assets/forester.png" alt="forester" width="220" height="130" loading="lazy"
-                        decoding="async">
-                </div>
-                <div class="partner-logo-box">
-                    <img src="assets/asia.png" alt="asia" width="220" height="130" loading="lazy" decoding="async">
-                </div>
-                <div class="partner-logo-box">
-                    <img src="assets/Pepsico.png" alt="Pepsico" width="220" height="130" loading="lazy"
-                        decoding="async">
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Footer -->
 
-    <!-- Guests & Partners Glowing Cards -->
-    <section class="section" id="guests-partners">
-        <div class="container pb-5">
-            <h2 class="section-title text-center mb-5" style="color: white;">Регистрация</h2>
-            <div class="glow-cards-grid">
-                <!-- Guests Card -->
-                <div class="glow-card">
-                    <div class="glow-orb" style="background: linear-gradient(135deg, #00f2fe, #4facfe);"></div>
-                    <h3 class="card-title text-uppercase" style="text-align: center;">ДЛЯ УЧАСТНИКОВ</h3>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSezwtu9t8qUJcE503gptnkyKWbog0gxUl5UVOygqX6dtDayNw/viewform"
-                        class="btn btn-primary btn-block">Участвовать бесплатно</a>
-                </div>
-                <!-- Partners Card -->
-                <div class="glow-card">
-                    <div class="glow-orb" style="background: linear-gradient(135deg, #ff0844, #ffb199);"></div>
-                    <h3 class="card-title text-uppercase" style="text-align: center;">ДЛЯ ПАРТНЕРОВ</h3>
-                    <a href="partner.html" class="btn btn-primary btn-block">Стать партнером</a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <footer class="footer" id="contacts">
+    <div class="container footer-content-centered">
+      <a href="index.html" class="logo footer-logo">
+        <img src="assets/logo.png" alt="AIU Fest Logo" width="180" height="180" loading="lazy" decoding="async"
+          style="width: 180px; height: 180px; object-fit: contain;" />
+      </a>
+      <p class="footer-uni-text">Международный университет Ала-Тоо</p>
+      <div class="footer-contacts">
+        <p>📍 г. Бишкек, ул. Анкара 1/8</p>
+        <p>📞 <a href="tel:+996555820000">+996 555 820 000</a></p>
+        <p>📧 <a href="mailto:sch@alatoo.edu.kg">sch@alatoo.edu.kg</a></p>
+      </div>
+      <div class="footer-social-icons">
+        <span class="social-label">Мы в соцсетях:</span>
+        <a href="https://instagram.com/alatoo.edu.kg" target="_blank" aria-label="Instagram">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.344 3.608 1.318.975.975 1.256 2.242 1.318 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.344 2.633-1.318 3.608-.975.975-2.242 1.256-3.608 1.318-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.344-3.608-1.318-.975-.975-1.256-2.242-1.318-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.344-2.633 1.318-3.608.975-.975 2.242-1.256 3.608-1.318 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.44-.645 1.44-1.44-.645-1.44-1.44-1.44z" />
+          </svg>
+        </a>
+        <a href="https://facebook.com/alatoo.edu.kg" target="_blank" aria-label="Facebook">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>© 2026 AIU Fest. Все права защищены.</p>
+    </div>
+  </footer>
 
-    <!-- Expanding Gallery Section -->
-    <section class="section" id="gallery">
-        <div class="container" style="max-width: 1400px;">
-            <h2 class="section-title text-uppercase mb-5" style="color: white;">Интересное на AIU Fest</h2>
-            <div class="expanding-cards-container">
-                <div class="expand-card">
-                    <div class="vertical-title">День открытых дверей</div>
-                    <div class="card-content">
-                        <h3>День открытых дверей</h3>
-                        <p>Открой свой университет: 5 факультетов, 22 программы.</p>
-                    </div>
-                </div>
-                <div class="expand-card">
-                    <div class="vertical-title">Ярмарка вакансий</div>
-                    <div class="card-content">
-                        <h3>Ярмарка вакансий</h3>
-                        <p>Начни строить карьеру с крупнейшими работодателями страны.</p>
-                    </div>
-                </div>
-                <div class="expand-card">
-                    <div class="vertical-title">18 стран в одном месте</div>
-                    <div class="card-content">
-                        <h3>18 стран в одном месте</h3>
-                        <p>Познакомься с культурой, традициями и национальной кухней.</p>
-                    </div>
-                </div>
-                <div class="expand-card">
-                    <div class="vertical-title">Шоу-Программа</div>
-                    <div class="card-content">
-                        <h3>Шоу-программа</h3>
-                        <p>Зарядись эмоциями на праздничном концерте со звездными гостями.</p>
-                    </div>
-                </div>
-                <div class="expand-card">
-                    <div class="vertical-title">Квест и лотерея</div>
-                    <div class="card-content">
-                        <h3>Квест и лотерея</h3>
-                        <p>Собирай фишки, меняй на крутые призы или выигрывай в лотерее.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <script>
+    /* Navbar toggle */
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+    navLinks.querySelectorAll('a').forEach(link =>
+      link.addEventListener('click', () => navLinks.classList.remove('active'))
+    );
 
-    <!-- About / Gallery Section -->
-    <section class="section" id="about">
-        <div class="container" style="max-width: 1400px;">
-            <h2 class="section-title text-center" style="color: white;">Галерея</h2>
+    /* Select package — jump to form & pre-fill select */
+    function selectPackage(name) {
+      const map = {
+        'Генеральный спонсор': 'general',
+        'Официальный партнер': 'official',
+        'Партнер': 'partner'
+      };
+      const select = document.getElementById('pkg-type');
+      if (select) select.value = map[name] || '';
+      const form = document.getElementById('contact-form');
+      if (form) form.scrollIntoView({ behavior: 'smooth' });
+    }
 
-            <div class="about-grid mt-5">
-                <!-- YouTube video (40%) -->
-                <div class="about-image">
-                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/Cps7mfvhTBU"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-                        style="border-radius: 10px; width: 100%; height: 100%; min-height: 350px;"></iframe>
-                </div>
+    /* Form submit */
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = document.querySelector('.submit-btn');
+      if (btn) {
+        btn.textContent = '✓ Заявка отправлена!';
+        btn.style.background = 'linear-gradient(135deg, #059669, #0284c7)';
+        btn.disabled = true;
+      }
+    }
 
-                <!-- Photo Slider (60%) -->
-                <div class="about-gallery">
-                    <div class="photo-slider" id="photoSlider">
-                        <button class="slider-btn slider-btn-prev" id="sliderPrev" aria-label="Назад">&#8592;</button>
+    // Presentation Slider Logic
+    let presCurrentSlide = 0;
+    const presSlides = document.querySelectorAll('.pres-slide');
+    const presDots = document.querySelectorAll('.pres-dot');
+    const presTotalSlides = presSlides.length;
+    let presAutoPlayInterval;
 
-                        <div class="slider-track-wrapper">
-                            <div class="pres-frame-glow"></div>
-                            <div class="slider-track" id="sliderTrack">
-                                <!-- Slide 1 -->
-                                <div class="slider-slide">
-                                    <img src="assets/test1.jpeg" alt="Фото 1" loading="lazy">
-                                    <img src="assets/test2.jpeg" alt="Фото 2" loading="lazy">
-                                    <img src="assets/test3.jpeg" alt="Фото 3" loading="lazy">
-                                </div>
-                                <!-- Slide 2 -->
-                                <div class="slider-slide">
-                                    <img src="assets/test4.jpeg" alt="Фото 4" loading="lazy">
-                                    <img src="assets/test5.jpeg" alt="Фото 5" loading="lazy">
-                                    <img src="assets/test6.jpeg" alt="Фото 6" loading="lazy">
-                                </div>
-                                <!-- Slide 3 -->
-                                <div class="slider-slide">
-                                    <img src="assets/test7.jpeg" alt="Фото 7" loading="lazy">
-                                    <img src="assets/test8.jpeg" alt="Фото 8" loading="lazy">
-                                    <img src="assets/test9.jpeg" alt="Фото 9" loading="lazy">
-                                </div>
-                                <!-- Slide 4 -->
-                                <div class="slider-slide">
-                                    <img src="assets/test10.jpeg" alt="Фото 10" loading="lazy">
-                                    <img src="assets/test11.jpeg" alt="Фото 11" loading="lazy">
-                                    <img src="assets/12.jpeg" alt="Фото 12" loading="lazy">
-                                </div>
-                                <!-- Slide 5 -->
-                                <div class="slider-slide">
-                                    <img src="assets/13.jpeg" alt="Фото 13" loading="lazy">
-                                    <img src="assets/14.jpeg" alt="Фото 14" loading="lazy">
-                                    <img src="assets/15.jpeg" alt="Фото 15" loading="lazy">
-                                </div>
-                                <!-- Slide 6 -->
-                                <div class="slider-slide">
-                                    <img src="assets/16.jpeg" alt="Фото 16" loading="lazy">
-                                    <img src="assets/17.jpeg" alt="Фото 17" loading="lazy">
-                                    <img src="assets/18.jpeg" alt="Фото 18" loading="lazy">
-                                </div>
-                                <!-- Slide 7 -->
-                                <div class="slider-slide">
-                                    <img src="assets/19.jpeg" alt="Фото 19" loading="lazy">
-                                    <img src="assets/20.jpeg" alt="Фото 20" loading="lazy">
-                                    <img src="assets/21.jpeg" alt="Фото 21" loading="lazy">
-                                </div>
-                                <!-- Slide 8 -->
-                                <div class="slider-slide">
-                                    <img src="assets/22.jpeg" alt="Фото 22" loading="lazy">
-                                    <img src="assets/23.jpeg" alt="Фото 23" loading="lazy">
-                                    <img src="assets/24.jpeg" alt="Фото 24" loading="lazy">
-                                </div>
-                                <!-- Slide 9 -->
-                                <div class="slider-slide">
-                                    <img src="assets/25.jpeg" alt="Фото 25" loading="lazy">
-                                    <img src="assets/26.jpeg" alt="Фото 26" loading="lazy">
-                                    <img src="assets/27.jpeg" alt="Фото 27" loading="lazy">
-                                </div>
-                                <!-- Slide 10 -->
-                                <div class="slider-slide">
-                                    <img src="assets/28.jpeg" alt="Фото 28" loading="lazy">
-                                    <img src="assets/29.jpeg" alt="Фото 29" loading="lazy">
-                                    <img src="assets/30.jpeg" alt="Фото 30" loading="lazy">
-                                </div>
-                            </div>
-                        </div>
+    function updatePresSlider() {
+      // Hide all
+      presSlides.forEach(s => s.classList.remove('active'));
+      presDots.forEach(d => d.classList.remove('active'));
 
-                        <button class="slider-btn slider-btn-next" id="sliderNext" aria-label="Вперёд">&#8594;</button>
+      // Show current
+      if (presSlides[presCurrentSlide]) {
+        presSlides[presCurrentSlide].classList.add('active');
+        if (presDots[presCurrentSlide]) {
+          presDots[presCurrentSlide].classList.add('active');
+        }
+      }
+    }
 
-                        <!-- Dots -->
-                        <div class="slider-dots" id="sliderDots"></div>
-                    </div>
-                </div>
-            </div>
+    function nextPresSlide() {
+      presCurrentSlide = (presCurrentSlide + 1) % presTotalSlides;
+      updatePresSlider();
+      resetPresInterval();
+    }
 
-            <!-- Stats Bar -->
-            <div class="stats-bar mt-5">
-                <div class="stat-item">
-                    <h3 class="stat-num">7000+</h3>
-                    <p class="stat-label">посетителей</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-num">15+</h3>
-                    <p class="stat-label">направлений</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-num">3000+</h3>
-                    <p class="stat-label">участников</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-num">10</h3>
-                    <p class="stat-label">Тематических зон</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-num">30+</h3>
-                    <p class="stat-label">Спикеров</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-num">5 000 000+</h3>
-                    <p class="stat-label">Охват в соцсетях</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-num">1500M²</h3>
-                    <p class="stat-label">Экспозиции</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    function prevPresSlide() {
+      presCurrentSlide = (presCurrentSlide - 1 + presTotalSlides) % presTotalSlides;
+      updatePresSlider();
+      resetPresInterval();
+    }
 
+    function goPresSlide(index) {
+      presCurrentSlide = index;
+      updatePresSlider();
+      resetPresInterval();
+    }
 
+    function startPresInterval() {
+      presAutoPlayInterval = setInterval(nextPresSlide, 4000);
+    }
 
-    <!-- Footer -->
-    <footer class="footer" id="contacts">
-        <div class="container footer-content-centered">
-            <a href="#" class="logo footer-logo">
-                <img src="assets/logo.png" alt="AIU Fest Logo" width="180" height="180" loading="lazy" decoding="async"
-                    style="width: 180px; height: 180px; object-fit: contain;">
-            </a>
-            <p class="footer-uni-text">Международный университет Ала-Тоо</p>
-            <div class="footer-contacts">
-                <p>📍 г. Бишкек, ул. Анкара 1/8</p>
-                <p>📞 <a href="tel:+996555820000">+996 555 820 000</a></p>
-                <p>📧 <a href="mailto:sch@alatoo.edu.kg">sch@alatoo.edu.kg</a></p>
-            </div>
-            <div class="footer-social-icons">
-                <span class="social-label">Мы в соцсетях:</span>
-                <a href="https://instagram.com/alatoo.edu.kg" target="_blank" aria-label="Instagram">
-                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.344 3.608 1.318.975.975 1.256 2.242 1.318 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.344 2.633-1.318 3.608-.975.975-2.242 1.256-3.608 1.318-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.344-3.608-1.318-.975-.975-1.256-2.242-1.318-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.344-2.633 1.318-3.608.975-.975 2.242-1.256 3.608-1.318 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.44-.645 1.44-1.44-.645-1.44-1.44-1.44z" />
-                    </svg>
-                </a>
-                <a href="https://facebook.com/alatoo.edu.kg" target="_blank" aria-label="Facebook">
-                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 AIU Fest. Все права защищены.</p>
-        </div>
-    </footer>
+    function resetPresInterval() {
+      clearInterval(presAutoPlayInterval);
+      startPresInterval();
+    }
 
-    <script src="script.js"></script>
-    <script>
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu when a link is clicked
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
+    // Init slider
+    if (presTotalSlides > 0) {
+      startPresInterval();
+    }
+  </script>
 </body>
 
 </html>
