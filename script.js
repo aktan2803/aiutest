@@ -5,9 +5,10 @@ function scaleHeroBanner() {
 
     const DESKTOP_W = 1520; // px — the natural design width of the card
     const containerPad = 48; // 24px on each side
-    const availableW = window.innerWidth - containerPad;
+    const MIN_W = 390;       // minimum viewport width before we stop scaling (iPhone size)
+    const availableW = Math.max(window.innerWidth - containerPad, MIN_W - containerPad);
 
-    if (availableW < DESKTOP_W) {
+    if (window.innerWidth - containerPad < DESKTOP_W) {
         const scale = availableW / DESKTOP_W;
 
         // Force desktop width so it doesn't wrap before scaling
